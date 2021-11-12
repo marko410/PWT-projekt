@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test', [HomeController::class, 'test']);
+Route::get('/list', [HomeController::class, 'list2'])->name('list');
 Route::get('/insert-task-form', [HomeController::class, 'getInsertForm'])->name('insert-form');
 Route::post('/insert-task', [HomeController::class, 'insertTask'])->name('insert');
 Route::get('/select-task/{id}', [HomeController::class, 'selectTask'])->name('select');

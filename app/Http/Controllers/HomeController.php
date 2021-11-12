@@ -2,12 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Prihlasenie;
 use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
 class HomeController extends Controller
 {
+
+
+    public function list2()
+    {
+        //echo 5555555;
+        //$task=Task::all();
+        $prihlasenie = Prihlasenie::orderBy('id', 'DESC')->first();
+        return view('list', ['prihlasenie' => $prihlasenie]);
+    }
+
     public function test()
     {
         echo 222;
@@ -18,55 +29,56 @@ class HomeController extends Controller
     }
     public function insertTask(Request $request)
     {
-        $content = $request->input('content', '');
-        $owner = $request->input('owner', '');
+        $meno= $request->input('meno', '');
+      // $skore = $request->input('skore', '');
 
-        $task = new Task();
-        $task->content = $content;
-        $task->owner = $owner;
-        $task->save();
+        $prihlasenie = new Prihlasenie();
+        $prihlasenie->meno = $meno;
+        //$prihlasenie->skore = $skore;
+        $prihlasenie->save();
 
-        return redirect()->route('select-all');
+        return redirect()->route('list');
+        //return redirect()->route('select-all');
     }
 
     public function selectTask($id)
     {
-        $task = Task::find($id);
-        return view('select',['task'=>$task]);
+        $prihlasenie = Prihlasenie::find($id);
+        return view('select',['prihlasenie'=>$prihlasenie]);
 
     }
 
     public function selectAll()
     {
 
-        $tasks = Task::all()->sortBy('created_at');
-        return view('select-all',['tasks'=>$tasks]);
+        $prihlaseniee = Prihlasenie::all()->sortBy('created_at');
+        return view('select-all',['prihlaseniee'=>$prihlaseniee]);
     }
 
     public function updateTask(Request $request)
     {
         $id = $request ->input('id', 1);
 
-        $content = $request->input('content', '');
-        $owner = $request->input('owner', '');
+        $meno = $request->input('meno', '');
+       // $skore = $request->input('skore', '');
 
-        $task = Task::findOrFail($id);
-        $task->content = $content;
-        $task->owner =$owner;
-        $task->update();
+        $prihlasenie = Prihlasenie::findOrFail($id);
+        $prihlasenie->meno = $meno;
+       // $prihlasenie->skore =$skore;
+        $prihlasenie->update();
 
         return redirect()->route('select', ['id'=>$id]);
     }
 
     public function getUpdateForm($id){
-        $task = Task::find($id);
-        return view('update', ['task'=>$task]);
+        $prihlasenie = Prihlasenie::find($id);
+        return view('update', ['prihlasenie'=>$prihlasenie]);
     }
 
     public function deleteTask($id)
     {
-        $task = Task::findOrFail($id);
-        $task->delete();
+        $prihlasenie = Prihlasenie::findOrFail($id);
+        $prihlasenie->delete();
         return redirect()->route('select-all');
 
     }
