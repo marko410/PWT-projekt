@@ -1,8 +1,8 @@
 @include('nav')
-@if($task)
-    ID:{{$task->id}}<br>
-    Uloho: {{$task->content}}<br>
-    Zodpovedna osoba: {{$task->owner}}<br>
+@if($prihlasenie)
+    ID:{{$prihlasenie->id}}<br>
+    Meno: {{$prihlasenie->meno}}<br>
+    <?php  // Skore: {{$prihlasenie->skore}}<br>?>
 @else
-    Uloha neexistuje
+    0 bodov
 @endif

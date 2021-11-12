@@ -1,25 +1,35 @@
 @include('nav')
 
-@if(count($tasks)>0)
+@if(count($prihlaseniee)>0)
+    @foreach($prihlaseniee as $prihlasenie)
+        <p>Meno hráča: {{$prihlasenie->meno}}</p>
+    @endforeach
+
+    <p>
+
+    </p>
     <table>
         <tr>
             <td>ID </td>
-            <td>Uloha </td>
-            <td>Pridelena </td>
-            <td>Datum vytvorenia </td>
+            <td>Meno hráča </td>
+            <td>Dátum </td>
         </tr>
-        @foreach($tasks as $task)
+        @foreach($prihlaseniee as $prihlasenie)
             <tr>
-                <td>{{$task->id}}</td>
-                <td>{{$task->content}}</td>
-                <td>{{$task->owner}}</td>
-                <td>{{$task->created_at}}</td>
-                <td><a href="{{route('select', ['id'=>$task->id])}}">Detail</a> </td>
-                <td><a href="{{route('delete', ['id'=>$task->id])}}">Vymazat</a> </td>
-                <td><a href="{{route('update-form', ['id'=>$task->id])}}">Aktualizovat</a> </td>
+                <td>{{$prihlasenie->id}}</td>
+                <td>{{$prihlasenie->meno}}</td>
+                <td>{{$prihlasenie->created_at}}</td>
+                <td><a href="{{route('select', ['id'=>$prihlasenie->id])}}">Detail</a> </td>
+                <td><a href="{{route('delete', ['id'=>$prihlasenie->id])}}">Vymazat</a> </td>
+                <td><a href="{{route('update-form', ['id'=>$prihlasenie->id])}}">Aktualizovat</a> </td>
             </tr>
         @endforeach
     </table>
 @else
     Neexistujú žiadne úlohy
 @endif
+
+<div>
+    <p class="menicko: ">Meno hráča: {{$prihlasenie->meno}}</p>
+
+</div>

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Prihlasenie extends Model
 {
     /**
      * The table associated with the model.
@@ -18,5 +18,6 @@ class Task extends Model
      *
      * @var array
      */
-    protected $fillable = ['meno', 'skore'];
+    protected $fillable = ['meno'];
 }
+
