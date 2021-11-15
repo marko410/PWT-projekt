@@ -6,6 +6,8 @@ use App\Models\Prihlasenie;
 use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Symfony\Component\Console\Input\Input;
+
 
 class HomeController extends Controller
 {
@@ -29,17 +31,33 @@ class HomeController extends Controller
     }
     public function insertTask(Request $request)
     {
-        $meno= $request->input('meno', '');
-      // $skore = $request->input('skore', '');
+        $meno = $request->input('meno', '');
+        // $skore = $request->input('skore', '');
 
         $prihlasenie = new Prihlasenie();
         $prihlasenie->meno = $meno;
         //$prihlasenie->skore = $skore;
-        $prihlasenie->save();
+        if($request->input('meno','')==null){
+            return back()->with('error', 'Zadajte používateľské meno!');
+        }
+        if ($prihlasenie::where('meno', '=', $request->input('meno',''))->first()) {
+            return back()->with('error', 'Používateľské meno je obsadené!');
 
-        return redirect()->route('list');
-        //return redirect()->route('select-all');
+        }
+        else{
+            $prihlasenie = new Prihlasenie();
+            $prihlasenie->meno = $meno;
+
+            $prihlasenie->save();
+            return redirect()->route('list');
+        }
     }
+
+       // $prihlasenie->save();
+
+       // return redirect()->route('list');
+        //return redirect()->route('select-all');
+  //  }
 
     public function selectTask($id)
     {

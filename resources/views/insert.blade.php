@@ -49,6 +49,10 @@
         <input type="submit" value="Hrať">
     </div>
 </form>
-
+@if(session()->has('error'))
+    <div class="alert alert-danger">
+        {{ session()->get('error') }}
+    </div>
+@endif
 </body>
 </html>
