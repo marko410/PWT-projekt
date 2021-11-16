@@ -21,6 +21,11 @@ class HomeController extends Controller
         return view('list', ['prihlasenie' => $prihlasenie]);
     }
 
+    public function showGame()
+    {
+        return view('game');
+    }
+
     public function test()
     {
         echo 222;
