@@ -17,7 +17,7 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/showGame', [HomeController::class, 'showGame'])->name('show-gamesu');
 Route::get('/test', [HomeController::class, 'test']);
 Route::get('/list', [HomeController::class, 'list2'])->name('list');
 Route::get('/insert-task-form', [HomeController::class, 'getInsertForm'])->name('insert-form');
