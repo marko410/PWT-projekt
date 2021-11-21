@@ -1,1 +1,79 @@
-<a href="{{route('insert-form')}}">Vloz ulohu</a> | <a href="{{route('select-all')}}">Zobraz ulohu</a><br>
+<!--<a href="{{route('insert-form')}}">Quíz</a> | <a href="{{route('select-all')}}">Rebríček</a><br>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            text-align: center;
+            font-family: 'Stigo', sans-serif;
+
+            background: -webkit-linear-gradient(#f17109, #b004da);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: rgba(0, 0, 255, 0.1);
+        }
+
+        .topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ff94a3;
+            color: black;
+        }
+
+        .topnav a.active {
+         //   background-color: #04AA6D;
+            color: black;
+        }
+        div.paticka{
+            background-color: rgba(0, 0, 255, 0.2);
+            position: fixed;
+            bottom: 0%;
+            width:100%;
+
+        }
+        p.pata{
+            position: relative;
+            bottom: 1%;
+            text-align: left;
+            left: 1%;
+            font-size: 15px;
+
+
+
+            font-family: 'Stigo', sans-serif;
+
+            background: -webkit-linear-gradient(#f17109, #b004da);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+       }
+
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <a class="active" href="{{route('insert-form')}}">Quíz</a>
+    <a href="{{route('select-all')}}">Rebríček</a>
+</div>
+</body>
+
+
+<div class="paticka"><footer><p class="pata">C all rights reserved</p></footer></div>
+
+</html>
