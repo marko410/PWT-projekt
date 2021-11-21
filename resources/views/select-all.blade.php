@@ -1,14 +1,75 @@
 @include('nav')
 
+    <!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/stigo');
+
+        body{
+            background-image: url("bcg.jpeg");
+        }
+
+        p.pismo{
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Stigo', sans-serif;
+
+            background: -webkit-linear-gradient(#f17109, #b004da);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+div.kontajner{
+   background-color: rgba(0, 0, 255, 0.1);
+
+    padding: 10px;
+    margin: 20px;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40%;
+    right: -30%;
+
+    border-radius: 25px;
+    border: 2px solid pink;
+}
+        div.kon2{
+        // border: 5px solid pink;
+            background-color: rgba(0, 0, 255, 0.1);
+            padding: 10px;
+            margin: 10px;
+            margin-bottom: 45px;
+            display:block;
+            text-align: left;
+            justify-content: center;
+            position: relative;
+        width: 40%;
+        right: -28%;
+
+            border-radius: 25px;
+            border: 2px solid pink;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="kontajner">
+    <div class="kon2">
 @if(count($prihlaseniee)>0)
     @foreach($prihlaseniee as $prihlasenie)
-        <p>Meno hráča: {{$prihlasenie->meno}}</p>
+        <p class="pismo">Meno hráča- {{$prihlasenie->meno}}</p>
     @endforeach
-
+    </div>
+</div>
     <p>
 
     </p>
-    <table>
+    <!--<table>
         <tr>
             <td>ID </td>
             <td>Meno hráča </td>
@@ -28,8 +89,10 @@
 @else
     Neexistujú žiadne úlohy
 @endif
-
+-->
 <div>
     <p class="menicko: ">Meno hráča: {{$prihlasenie->meno}}</p>
 
 </div>
+</body>
+</html>
