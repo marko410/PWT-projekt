@@ -103,7 +103,7 @@
         <p></p>
 
 
-    <div class="baton">-
+    <div class="baton">
         <button type="submit"  class="glow-on-hover"  >
             HRAJ!
         </button>
