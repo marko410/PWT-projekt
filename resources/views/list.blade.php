@@ -95,21 +95,21 @@
 
 <div class="container">
 
-    <div class="textik">Čo je na obrázku jeden ?</div><hr>
-    <img src="pic1.jpg" width="300" height="400">
+    <div class="textik">Kde sa tvorí žlč?</div><hr>
+    <img src="obrázok1.jpg" width="300" height="400">
     <p>                      </p>
     <div class="radio-toolbar">
         <input class="styl" type="radio" id="radioApple" name="radioFruit" value="Odpoved 1" checked>
-        <label for="radioApple">Apple</label>
+        <label for="radioApple">V pečeni</label><br>
 
         <input class="styl" type="radio" id="correct1" name="radioFruit" value="Odpoved 2">
-        <label for="radioBanana">Banana</label><br>
+        <label for="radioBanana">V žlčníku</label><br>
 
         <input class="styl" type="radio" id="correct1" name="radioFruit" value="Odpoved 3">
-        <label for="radioOrange">Orange</label>
+        <label for="radioOrange">V pankrease</label><br>
 
         <input class="styl" type="radio" id="jozo" name="radioFruit" value="Odpoved 4">
-        <label for="radioOrange">Orange</label><br>
+        <label for="radioOrange">V žlčových uzlíkoch</label><br>
     </div>
     <button class="glow-on-hover" class="next" onclick="next(1)">NEXT</button>
 
