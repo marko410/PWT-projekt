@@ -91,7 +91,7 @@ div.kontajner{
 @endif
 -->
 <div>
-    <p class="menicko: ">Meno hráča: {{$prihlasenie->meno}}</p>
+    <!--  <p class="menicko: ">Meno hráča: {{$prihlasenie->meno}}</p> -->
 
 </div>
 </body>
