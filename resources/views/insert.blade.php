@@ -15,7 +15,7 @@
             //border: 5px solid pink;
             background-color: rgba(0, 0, 255, 0.08);
             padding: 10px;
-            margin: 20px;
+            //margin: 30px;
             margin-top: 50px;
             //display:block;
             text-align: center;
@@ -23,7 +23,7 @@
             justify-content: center;
             position: relative;
             width: 40%;
-            height: 260px;
+            height: 280px;
             right: -30%;
             border-radius: 25px;
             border: 2px solid pink;
@@ -48,7 +48,7 @@
         }
 
         div.baton{
-            margin: 0 auto;
+            margin-bottom: auto ;
             text-align: center;
         }
         div.inp{
@@ -83,6 +83,20 @@
             -webkit-text-fill-color: transparent;
         }
 
+        div.omg{
+
+            position: relative;
+            top:-10%;
+            margin: 2px;
+            text-decoration: underline 4px solid pink;
+            width: 30%;
+            font-weight: bolder;
+
+            font-family: 'Stigo', sans-serif;
+            background: -webkit-linear-gradient(#f17109, #b004da);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 
 </head>
@@ -100,7 +114,13 @@
         <input type="hidden" name="_token" value="{{csrf_token()}}">
     </div>
 
-        <p></p>
+        @if(session()->has('error'))
+            <div class="omg">
+                <div class="alert alert-danger" >
+                    {{ session()->get('error') }}
+                </div>
+            </div>
+        @endif
 
 
     <div class="baton">
@@ -108,12 +128,11 @@
             HRAJ!
         </button>
     </div>
+
     </div>
 </form>
-@if(session()->has('error'))
-    <div class="alert alert-danger">
-        {{ session()->get('error') }}
-    </div>
-@endif
+
+
+
 </body>
 </html>
