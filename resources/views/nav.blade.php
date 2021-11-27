@@ -5,12 +5,12 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Balthasar sans-serif;
         }
 
         a{
             text-align: center;
-            font-family: 'Stigo', sans-serif;
+            font-family: 'Balthasar', sans-serif;
 
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
@@ -56,7 +56,7 @@
 
 
 
-            font-family: 'Stigo', sans-serif;
+            font-family: 'Balthasar', sans-serif;
 
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
