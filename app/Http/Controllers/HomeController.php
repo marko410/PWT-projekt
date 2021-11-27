@@ -12,6 +12,19 @@ use Symfony\Component\Console\Input\Input;
 class HomeController extends Controller
 {
 
+public function vlozBody(Request $request){
+   // DB::insert('insert into task (meno)values (?,?)',['dfsf'] );
+    /*$task=$request->input('meno','');
+    $task = new Task();
+    $task->meno = $meno;
+
+    $task->save();*/
+    DB::table('task')->insert(
+        ['meno' => 'marienka']
+    );
+
+
+}
 
     public function list2()
     {

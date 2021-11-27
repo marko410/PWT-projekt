@@ -189,9 +189,10 @@
 
     <div class="kon2">
     <div class="radio-toolbar">
-        <input class="styl" type="radio" id="Odpoved1" name="odpoved" value="Odpoved 1" checked>
+        <input class="styl" type="radio" id="Odpoved1" name="odpoved1" value="Odpoved 1" checked>
         <label for="Odpoved1">Kyslíku</label><br>
 
+<<<<<<< HEAD
         <input class="styl" type="radio" id="Odpoved2"  name="odpoved" value="Odpoved 2"checked>
         <label for="Odpoved2">Oxidu uhličitého</label><br>
 
@@ -199,6 +200,15 @@
         <label for="Odpoved3">Dusíku</label><br>
 
         <input class="styl" type="radio" id="Odpoved4"  name="odpoved" value="Odpoved 4"checked>
+=======
+        <input class="styl" type="radio" id="Odpoved2"  name="odpoved1" value="Odpoved 2">
+        <label for="Odpoved2">Oxidu uhličitého</label><br>
+
+        <input class="styl" type="radio" id="correct2"  name="odpoved1" value="Odpoved 3">
+        <label for="Odpoved3">Dusíku</label><br>
+
+        <input class="styl" type="radio" id="Odpoved4"  name="odpoved1" value="Odpoved 4">
+>>>>>>> feature/buttony_funkcia
         <label for="Odpoved4">Vodnej pary</label><br>
     </div>
     </div>
@@ -212,6 +222,7 @@
 
     <div class="kon2">
     <div class="radio-toolbar">
+<<<<<<< HEAD
         <input class="styl" type="radio" id="Odpoved1"  name="odpoved" value="Odpoved 1"  checked>
         <label for="Odpoved1">4500</label><br>
 
@@ -236,48 +247,27 @@
     <div class="textik">Čo je na obrázku tri ?</div><hr>
     <img src="pic1.jpg" width="300" height="400">
     <p>                      </p>
+=======
+        <input class="styl" type="radio" id="Odpoved1"  name="odpoved2" value="Odpoved 1" checked>
+        <label for="Odpoved1">4500</label><br>
 
-    <div class="radio-toolbar">
-        <input class="styl" type="radio" id="Odpoved1" value="Odpoved 1" checked>
-        <label for="Odpoved 1">V pečeni</label><br>
+        <input class="styl" type="radio" id="Odpoved2"  name="odpoved2" value="Odpoved 2">
+        <label for="Odpoved2">5500</label><br>
 
-        <input class="styl" type="radio" id="correct1"  value="Odpoved 2">
-        <label for="Odpoved 2">V žlčníku</label><br>
+        <input class="styl" type="radio" id="Odpoved3"  name="odpoved2" value="Odpoved 3">
+        <label for="Odpoved3">6500</label><br>
 
-        <input class="styl" type="radio" id="Odpoved3"  value="Odpoved 3">
-        <label for="Odpoved 3">V pankrease</label><br>
-
-        <input class="styl" type="radio" id="Odpoved4" value="Odpoved 4">
-        <label for="Odpoved 4">V žlčových uzlíkoch</label><br>
+        <input class="styl" type="radio" id="correct3"  name="odpoved2" value="Odpoved 4">
+        <label for="Odpoved4">7500</label><br>
     </div>
-    <button class="glow-on-hover" class="glow-on-hover" onclick="result()">Vyhodnotiť</button>
-    <p>&nbsp;</p>
+    </div>
+>>>>>>> feature/buttony_funkcia
+
+    <button class="glow-on-hover"  onclick="result()">Vyhodnotiť</button>
 
 </div>
 
-<div class="container">
-    <div class="textik">Čo je na obrázku tri ?</div><hr>
-    <img src="pic1.jpg" width="300" height="400">
-    <p>                      </p>
 
-    <div class="radio-toolbar">
-        <input class="styl" type="radio" id="Odpoved1" value="Odpoved 1" checked>
-        <label for="Odpoved 1">V pečeni</label><br>
-
-        <input class="styl" type="radio" id="correct1"  value="Odpoved 2">
-        <label for="Odpoved 2">V žlčníku</label><br>
-
-        <input class="styl" type="radio" id="Odpoved3"  value="Odpoved 3">
-        <label for="Odpoved 3">V pankrease</label><br>
-
-        <input class="styl" type="radio" id="Odpoved4" value="Odpoved 4">
-        <label for="Odpoved 4">V žlčových uzlíkoch</label><br>
-    </div>
-    <button class="glow-on-hover" class="glow-on-hover" onclick="result()">Vyhodnotiť</button>
-    <p>&nbsp;</p>
-
-</div>
--->
 <script>
     // displaying the first block of question
     document.getElementsByClassName('container')[0].style.display = "block";
@@ -300,6 +290,7 @@
         if (document.getElementById('correct3').checked) {
             score++; 
         }
+<<<<<<< HEAD
         
 alert("your score is: "+ score);
         
@@ -307,6 +298,13 @@ alert("your score is: "+ score);
 
 
 
+=======
+
+        alert("your score is: "+ score);
+
+    }
+
+>>>>>>> feature/buttony_funkcia
 </script>
 
 </body>
