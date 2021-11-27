@@ -5,7 +5,7 @@
 <head>
 
     <style>
-        @import url('http://fonts.cdnfonts.com/css/stigo');
+        @import url('http://fonts.cdnfonts.com/css/balthasar');
 
     </style>
 

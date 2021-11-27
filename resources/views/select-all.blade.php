@@ -5,7 +5,7 @@
 <head>
 
     <style>
-        @import url('http://fonts.cdnfonts.com/css/stigo');
+        @import url('http://fonts.cdnfonts.com/css/balthazar');
 
         body{
             background-image: url("bcg.jpeg");
@@ -14,7 +14,7 @@
         p.pismo{
             font-size: 20px;
             text-align: center;
-            font-family: 'Stigo', sans-serif;
+            font-family: 'Balthasar', sans-serif;
 
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
@@ -62,7 +62,8 @@ div.kontajner{
     <div class="kon2">
 @if(count($prihlaseniee)>0)
     @foreach($prihlaseniee as $prihlasenie)
-        <p class="pismo">Meno hráča- {{$prihlasenie->meno}}</p>
+        <p class="pismo"> {{$prihlasenie->meno}} - {{$prihlasenie->score}} </p>
+      
     @endforeach
     </div>
 </div>

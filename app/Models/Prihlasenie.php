@@ -18,6 +18,8 @@ class Prihlasenie extends Model
      *
      * @var array
      */
-    protected $fillable = ['meno'];
+    protected $fillable = ['meno', 'score'];
+
+
 }
 

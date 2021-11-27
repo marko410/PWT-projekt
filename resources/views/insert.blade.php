@@ -3,10 +3,10 @@
 <head>
     <link rel="stylesheet" href="../resources/css/main.css">
     <style>
-        @import url('http://fonts.cdnfonts.com/css/stigo');
+        @import url('http://fonts.cdnfonts.com/css/balthazar');
         p.meno{
             font-size: 30px;
-            font-family: "Roboto", sans-serif;
+            font-family: "Balthasar", sans-serif;
             margin: 0 auto;
             text-align: center;
         }
@@ -68,7 +68,7 @@
             //left:2%;
             font-size: 50px;
             text-align: center;
-            font-family: 'Stigo', sans-serif;
+            font-family: 'Balthasar', sans-serif;
 
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
@@ -76,7 +76,7 @@
         }
         p.meno{
             text-align: center;
-            font-family: 'Stigo', sans-serif;
+            font-family: 'Balthasar', sans-serif;
 
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
@@ -92,7 +92,7 @@
             width: 30%;
             font-weight: bolder;
 
-            font-family: 'Stigo', sans-serif;
+            font-family: 'Balthasar', sans-serif;
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -107,7 +107,7 @@
     <h1 class="nadpis">Vedecký Quiz</h1>
     <div class="megakantajner">
     <div class="kontajner">
-        <p class="meno">Meno Hráča</p><br>
+        <p class="meno">Meno </p><br>
         <div class="inp">
             <input type="text" name="meno" placeholder="meno" ><br>
         </div>
