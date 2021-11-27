@@ -166,16 +166,16 @@
 
     <div class="kon2">
     <div class="radio-toolbar">
-        <input class="styl" type="radio" id="correct1" name="odpoved" value="Odpoved 1" checked>
+        <input class="styl" type="radio" id="correct1" name="odpoved1" value="Odpoved 1" >
         <label for="Odpoved1">V pečeni</label><br>
 
-        <input class="styl" type="radio" id="Odpoved2"  name="odpoved"  value="Odpoved 2"checked>
+        <input class="styl" type="radio" id="Odpoved2"  name="odpoved1"  value="Odpoved 2">
         <label for="Odpoved2">V žlčníku</label><br>
 
-        <input class="styl" type="radio" id="Odpoved3"  name="odpoved" value="Odpoved 3"checked>
+        <input class="styl" type="radio" id="Odpoved3"  name="odpoved1" value="Odpoved 3">
         <label for="Odpoved3">V pankrease</label><br>
 
-        <input class="styl" type="radio" id="Odpoved4"  name="odpoved" value="Odpoved 4"checked>
+        <input class="styl" type="radio" id="Odpoved4"  name="odpoved1" value="Odpoved 4">
         <label for="Odpoved4">V žlčových uzlíkoch</label><br>
     </div>
     </div>
@@ -189,16 +189,16 @@
 
     <div class="kon2">
     <div class="radio-toolbar">
-        <input class="styl" type="radio" id="Odpoved1" name="odpoved" value="Odpoved 1" checked>
+        <input class="styl" type="radio" id="Odpoved1" name="odpoved2" value="Odpoved 1" >
         <label for="Odpoved1">Kyslíku</label><br>
 
-        <input class="styl" type="radio" id="Odpoved2"  name="odpoved" value="Odpoved 2"checked>
+        <input class="styl" type="radio" id="Odpoved2"  name="odpoved2" value="Odpoved 2">
         <label for="Odpoved2">Oxidu uhličitého</label><br>
 
-        <input class="styl" type="radio" id="correct2"  name="odpoved" value="Odpoved 3" checked>
+        <input class="styl" type="radio" id="correct2"  name="odpoved2" value="Odpoved 3" >
         <label for="Odpoved3">Dusíku</label><br>
 
-        <input class="styl" type="radio" id="Odpoved4"  name="odpoved" value="Odpoved 4"checked>
+        <input class="styl" type="radio" id="Odpoved4"  name="odpoved2" value="Odpoved 4">
         <label for="Odpoved4">Vodnej pary</label><br>
     </div>
     </div>
@@ -212,16 +212,16 @@
 
     <div class="kon2">
     <div class="radio-toolbar">
-        <input class="styl" type="radio" id="Odpoved1"  name="odpoved" value="Odpoved 1"  checked>
+        <input class="styl" type="radio" id="Odpoved1"  name="odpoved3" value="Odpoved 1"  >
         <label for="Odpoved1">4500</label><br>
 
-        <input class="styl" type="radio" id="Odpoved2"  name="odpoved" value="Odpoved 2"checked>
+        <input class="styl" type="radio" id="Odpoved2"  name="odpoved3" value="Odpoved 2">
         <label for="Odpoved2">5500</label><br>
 
-        <input class="styl" type="radio" id="Odpoved3"  name="odpoved" value="Odpoved 3"checked>
+        <input class="styl" type="radio" id="Odpoved3"  name="odpoved3" value="Odpoved 3">
         <label for="Odpoved3">6500</label><br>
 
-        <input class="styl" type="radio" id="correct3"  name="odpoved" value="Odpoved 4"checked >
+        <input class="styl" type="radio" id="correct3"  name="odpoved3" value="Odpoved 4">
         <label for="Odpoved4">7500</label><br>
     </div>
     </div>
