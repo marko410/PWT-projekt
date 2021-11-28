@@ -109,7 +109,7 @@
         }
 
         .radio-toolbar input[type="radio"] {
-            opacity: 0;
+            opacity: 100;
             position: fixed;
             width: 20px;
             height: 20px;
@@ -728,7 +728,7 @@
             score++;
         }
         if (document.getElementById('correct19').checked) {
-            score++;
+            score=score+2;
         }
         if (document.getElementById('correct20').checked) {
             score++;
