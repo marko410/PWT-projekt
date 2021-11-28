@@ -576,7 +576,7 @@
             <label for="Odpoved4">33</label><br>
         </div>
     </div>
-    <button class="glow-on-hover"  onclick="result()">Vyhodnotiť</button>
+    <button class="glow-on-hover" class="next" onclick="next(17)">NEXT</button>
 
 </div>
 
@@ -601,7 +601,7 @@
             <label for="Odpoved4">Nočná mora</label><br>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(17)">NEXT</button>
+    <button class="glow-on-hover" class="next" onclick="next(18)">NEXT</button>
 
 </div>
 
@@ -659,52 +659,7 @@
 
 <!--koniec-->
 
-<!--<div class="container">
-    <div class="textik">Čo je na obrázku tri ?</div><hr>
-    <img src="pic1.jpg" width="300" height="400">
-    <p>                      </p>
 
-    <div class="radio-toolbar">
-        <input class="styl" type="radio" id="Odpoved1" value="Odpoved 1" checked>
-        <label for="Odpoved 1">V pečeni</label><br>
-
-        <input class="styl" type="radio" id="correct1"  value="Odpoved 2">
-        <label for="Odpoved 2">V žlčníku</label><br>
-
-        <input class="styl" type="radio" id="Odpoved3"  value="Odpoved 3">
-        <label for="Odpoved 3">V pankrease</label><br>
-
-        <input class="styl" type="radio" id="Odpoved4" value="Odpoved 4">
-        <label for="Odpoved 4">V žlčových uzlíkoch</label><br>
-    </div>
-    <button class="glow-on-hover" class="glow-on-hover" onclick="result()">Vyhodnotiť</button>
-    <p>&nbsp;</p>
-
-</div>
-
-<div class="container">
-    <div class="textik">Čo je na obrázku tri ?</div><hr>
-    <img src="pic1.jpg" width="300" height="400">
-    <p>                      </p>
-
-    <div class="radio-toolbar">
-        <input class="styl" type="radio" id="Odpoved1" value="Odpoved 1" checked>
-        <label for="Odpoved 1">V pečeni</label><br>
-
-        <input class="styl" type="radio" id="correct1"  value="Odpoved 2">
-        <label for="Odpoved 2">V žlčníku</label><br>
-
-        <input class="styl" type="radio" id="Odpoved3"  value="Odpoved 3">
-        <label for="Odpoved 3">V pankrease</label><br>
-
-        <input class="styl" type="radio" id="Odpoved4" value="Odpoved 4">
-        <label for="Odpoved 4">V žlčových uzlíkoch</label><br>
-    </div>
-    <button class="glow-on-hover" class="glow-on-hover" onclick="result()">Vyhodnotiť</button>
-    <p>&nbsp;</p>
-
-</div>
--->
 <script>
     // displaying the first block of question
     document.getElementsByClassName('container')[0].style.display = "block";
