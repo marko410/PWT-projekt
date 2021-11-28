@@ -226,7 +226,7 @@
     </div>
     </div>
     <button class="glow-on-hover" class="next" onclick="next(3)">NEXT</button>
-            onclick="result()">Vyhodnotiť</button>
+
 
 </div>
 <!--<otazka4-->
