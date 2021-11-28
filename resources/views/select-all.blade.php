@@ -18,7 +18,17 @@
 
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        table{
+        border: 1px solid black;
+        width: 100%;
+        }
+
+        th {
+        text-align: center;
         }
 
 div.kontajner{
@@ -38,7 +48,7 @@ div.kontajner{
     border: 2px solid pink;
 }
         div.kon2{
-        // border: 5px solid pink;
+        /* border: 5px solid pink; */
             background-color: rgba(0, 0, 255, 0.1);
             padding: 10px;
             margin: 10px;
@@ -60,9 +70,32 @@ div.kontajner{
 <body>
 <div class="kontajner">
     <div class="kon2">
+    <table>
+        <tr>
+            <td>Poradie</td>
+            <td>Meno</td>
+            <!-- <td>Dátum pridania</td> -->
+            <td>Skóre</td>
+        </tr>
 @if(count($prihlaseniee)>0)
     @foreach($prihlaseniee as $prihlasenie)
-        <p class="pismo"> {{$prihlasenie->meno}} - {{$prihlasenie->score}} </p>
+        <!-- <p class="pismo"> {{$prihlasenie->meno}}</p> -->
+        <table>
+        <tr>
+            <!-- <td>Poradie</td>
+            <td>Meno</td>
+            <td>Dátum pridania</td>
+            <td>Skóre</td> -->
+        </tr>
+            <tr>
+                <td>{{$prihlasenie->id}}</td>
+                <td>{{$prihlasenie->meno}}</td>
+                <!-- <td>{{$prihlasenie->created_at}}</td> -->
+                <td>{{$prihlasenie->score}}</td>
+            </tr>
+            <br><br>
+            <hr>
+    </table>
       
     @endforeach
     </div>
