@@ -71,11 +71,7 @@ public function vlozBody(Request $request){
         }
     }
 
-       // $prihlasenie->save();
 
-       // return redirect()->route('list');
-        //return redirect()->route('select-all');
-  //  }
 
     public function selectTask($id)
     {
@@ -96,11 +92,10 @@ public function vlozBody(Request $request){
         $id = $request ->input('id', 1);
 
         $meno = $request->input('meno', '');
-       // $skore = $request->input('skore', '');
+
 
         $prihlasenie = Prihlasenie::findOrFail($id);
         $prihlasenie->meno = $meno;
-       // $prihlasenie->skore =$skore;
         $prihlasenie->update();
 
         return redirect()->route('select', ['id'=>$id]);
