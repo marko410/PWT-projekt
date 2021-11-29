@@ -652,7 +652,7 @@
             <label for="Odpoved4">Konzumácia alkoholu</label><br>
         </div>
     </div>
-    <button class="glow-on-hover"  onclick="result()">Vyhodnotiť</button>
+    <a href="{{route('select-all')}}" onclick="result()">Vyhodnotenie</a>
 
 </div>
 
