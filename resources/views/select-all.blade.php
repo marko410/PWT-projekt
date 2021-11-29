@@ -62,8 +62,8 @@ div.kontajner{
     <div class="kon2">
 @if(count($prihlaseniee)>0)
     @foreach($prihlaseniee as $prihlasenie)
-        <p class="pismo"> {{$prihlasenie->meno}} - {{$prihlasenie->score}} </p>
-      
+                <p class="pismo"> {{$prihlasenie->meno}}  - {{$prihlasenie->score}} </p>
+
     @endforeach
     </div>
 </div>
