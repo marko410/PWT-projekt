@@ -109,7 +109,7 @@
         }
 
         .radio-toolbar input[type="radio"] {
-            opacity: 100;
+            opacity: 0;
             position: fixed;
             width: 20px;
             height: 20px;
@@ -142,7 +142,9 @@
         }
 
 
-
+audio{
+    opacity:0;
+}
 
 
 
@@ -158,6 +160,12 @@
     <p class="velkyfrajer">Ste prihlásený ako - {{$prihlasenie->meno}}</p>
 
 </div>
+
+<audio controls autoplay>
+
+    <source src="riadna_songovica.mp3" type="audio/mpeg">
+
+</audio>
 
 <div class="container">
 
@@ -182,7 +190,7 @@
     <button class="glow-on-hover" class="next" onclick="next(1)">NEXT</button>
 
 </div>
-
+<!--
 <div class="container">
     <div class="textik">Vydychovaný vzduch obsahuje najviac?</div><hr>
     <img src="obrázok2.jpg" width="450" height="400">
@@ -205,7 +213,7 @@
     <button class="glow-on-hover" class="next" onclick="next(2)">NEXT</button>
 
 </div>
-<!--<otazka3-->
+
 <div class="container">
     <div class="textik">Koľko litrov krvi prečerpá za deň ľudské srdce?</div><hr>
     <img src="obrázok3.jpg" width="450" height="400">
@@ -229,7 +237,7 @@
 
 
 </div>
-<!--<otazka4-->
+
 
 <div class="container">
     <div class="textik">Ktorý z týchto orgánov ľudského tela nie je párový??</div><hr>
@@ -255,7 +263,7 @@
 </div>
 
 
-<!--<otazka5-->
+
 
 <div class="container">
     <div class="textik">Ktorá krvná skupina má vo svete najvyššie zastúpenie medzi obyvateľstvom??</div><hr>
@@ -280,7 +288,7 @@
 
 </div>
 
-<!--<otazka6-->
+
 
 <div class="container">
     <div class="textik">Koľko rôznych vôní rozozná náš čuch?</div><hr>
@@ -305,7 +313,7 @@
 
 </div>
 
-<!--<otazka7-->
+
 
 <div class="container">
     <div class="textik">Ľudský tep sa spomalí v okamihu, keď sa tvár dotkne vody. Ako sa nazýva tento jav?</div><hr>
@@ -330,7 +338,7 @@
 
 </div>
 
-<!--<otazka8-->
+
 
 <div class="container">
     <div class="textik">Väzivový útvar, ktorý sa nachádza na lebke malých detí v prvých dvoch rokoch života, sa nazýva:</div><hr>
@@ -354,7 +362,7 @@
     <button class="glow-on-hover" class="next" onclick="next(8)">NEXT</button>
 
 </div>
-<!--<otazka9-->
+
 
 <div class="container">
     <div class="textik">Ktoré zuby nenájdete v mliečnom chrupe?</div><hr>
@@ -379,7 +387,6 @@
 
 </div>
 
-<!--<otazka10-->
 
 <div class="container">
     <div class="textik">Počet stavcov chrbtice človeka je rovnaký ako u žirafy. Koľko ich máme?</div><hr>
@@ -404,7 +411,7 @@
 
 </div>
 
-<!--<otazka11-->
+
 
 <div class="container">
     <div class="textik">Kde nájdeme najmenšie kosti a svaly v ľudskom tele?</div><hr>
@@ -429,7 +436,7 @@
 
 </div>
 
-<!--<otazka12-->
+
 
 <div class="container">
     <div class="textik">Akú kosť vidíte na obrázku?</div><hr>
@@ -454,7 +461,7 @@
 
 </div>
 
-<!--<otazka13-->
+
 
 <div class="container">
     <div class="textik">Na obrázku vidíme prístroj, ktorý sa nazýva:</div><hr>
@@ -479,7 +486,7 @@
 
 </div>
 
-<!--<otazka14-->
+
 
 <div class="container">
     <div class="textik">Ako sa nazýva kosť na obrázku?</div><hr>
@@ -504,7 +511,7 @@
 
 </div>
 
-<!--<otazka15-->
+
 
 <div class="container">
     <div class="textik">Ako sa nazýva kosť na obrázku?</div><hr>
@@ -529,7 +536,7 @@
 
 </div>
 
-<!--<otazka16-->
+
 
 <div class="container">
     <div class="textik">Kto nie je z uvedených oprávnený predpisovať lieky?</div><hr>
@@ -555,7 +562,7 @@
 </div>
 
 
-<!--<otazka17-->
+
 
 <div class="container">
     <div class="textik">Koľko svalov sa musí zapojiť pri úsmeve?</div><hr>
@@ -580,7 +587,7 @@
 
 </div>
 
-<!--<otazka18-->
+
 
 <div class="container">
     <div class="textik">Ako nazývame ochorenie, ktoré sa prejavuje niekoľkosekundovými zástavami dýchania počas noci?</div><hr>
@@ -605,7 +612,7 @@
 
 </div>
 
-<!--<otazka19-->
+
 
 <div class="container">
     <div class="textik">Otorinolaryngológ je odborníkom na:</div><hr>
@@ -630,9 +637,9 @@
 
 </div>
 
-
+-->
 <!--<otazka20-->
-
+<form method="post" action="{{route('list3')}}">
 <div class="container">
     <div class="textik">Ktorý faktor sa najviac podieľa na vzniku ochorení pľúc?</div><hr>
     <img src="obrázok20.jpg" width="450" height="400">
@@ -652,10 +659,13 @@
             <label for="Odpoved4">Konzumácia alkoholu</label><br>
         </div>
     </div>
-    <a href="{{route('select-all')}}" onclick="result()">Vyhodnotenie</a>
+
+        <input type="hidden"  name="score" id="kkk"  value=""/>
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
+    <button type="submit" class="glow-on-hover" onclick="result()" >Vyhodnotenie</button>
 
 </div>
-
+</form>
 
 <!--koniec-->
 
@@ -672,11 +682,13 @@
     //getting final result
 
     function result() {
-        var score = 0;
+        var skore = 0;
         if (document.getElementById('correct1').checked) {
-            score++;
+           //score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
-        if (document.getElementById('correct2').checked) {
+        /*if (document.getElementById('correct2').checked) {
             score++;
         }
         if (document.getElementById('correct3').checked) {
@@ -729,12 +741,20 @@
         }
         if (document.getElementById('correct19').checked) {
             score=score+2;
-        }
-        if (document.getElementById('correct20').checked) {
-            score++;
-        }
+        }*/
 
-        alert("your score is: "+ score);
+      /*  if (document.getElementById('correct20').value) {
+            score++;
+            alert("your score is: "+ score);
+        }*/
+        if (document.getElementById('correct20').checked) {
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
+
+            alert("your score is: "+ skore);
+        }
+        //document.getElementById('correct20').value = skore;
+        //alert("your score is: "+ skore);
 
     }
 

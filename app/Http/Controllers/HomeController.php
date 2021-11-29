@@ -12,24 +12,20 @@ use Symfony\Component\Console\Input\Input;
 class HomeController extends Controller
 {
 
-public function vlozBody(Request $request){
-   // DB::insert('insert into task (meno)values (?,?)',['dfsf'] );
-    /*$task=$request->input('meno','');
-    $task = new Task();
-    $task->meno = $meno;
 
-    $task->save();*/
-    DB::table('task')->insert(
-        ['meno' => 'marienka']
-    );
+public function vlozScore(Request $request){
+    $score = $request->input('score', '');
 
+    $prihlasenie = Prihlasenie::latest('id')->first();
+    $prihlasenie->score = $score;
+    $prihlasenie->update();
 
+    return redirect()->route('select-all');
 }
 
     public function list2()
     {
-        //echo 5555555;
-        //$task=Task::all();
+
         $prihlasenie = Prihlasenie::orderBy('id', 'DESC')->first();
         return view('list', ['prihlasenie' => $prihlasenie]);
     }
@@ -50,11 +46,10 @@ public function vlozBody(Request $request){
     public function insertTask(Request $request)
     {
         $meno = $request->input('meno', '');
-        // $skore = $request->input('skore', '');
 
         $prihlasenie = new Prihlasenie();
         $prihlasenie->meno = $meno;
-        //$prihlasenie->skore = $skore;
+
         if($request->input('meno','')==null){
             return back()->with('error', 'Zadajte používateľské meno!');
         }
