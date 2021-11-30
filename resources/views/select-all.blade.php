@@ -27,9 +27,6 @@
         width: 100%;
         }
 
-        th {
-        text-align: center;
-        }
 
 div.kontajner{
    background-color: rgba(0, 0, 255, 0.1);
@@ -53,7 +50,7 @@ div.kontajner{
             padding: 10px;
             margin: 10px;
             margin-bottom: 45px;
-            display:block;
+            display: block;
             text-align: left;
             justify-content: center;
             position: relative;
