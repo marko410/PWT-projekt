@@ -16,6 +16,7 @@ class CreatePrihlasenieTable extends Migration
         Schema::create('prihlasenie', function (Blueprint $table) {
             $table->id();
             $table->string('meno', 150);
+            $table->integer('score');
             $table->timestamps();
         });
     }
