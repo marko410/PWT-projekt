@@ -18,8 +18,15 @@
 
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        table{
+        border: 1px solid black;
+        width: 100%;
+        }
+
 
 div.kontajner{
    background-color: rgba(0, 0, 255, 0.1);
@@ -38,12 +45,12 @@ div.kontajner{
     border: 2px solid pink;
 }
         div.kon2{
-        // border: 5px solid pink;
+        /* border: 5px solid pink; */
             background-color: rgba(0, 0, 255, 0.1);
             padding: 10px;
             margin: 10px;
             margin-bottom: 45px;
-            display:block;
+            display: block;
             text-align: left;
             justify-content: center;
             position: relative;
@@ -60,6 +67,13 @@ div.kontajner{
 <body>
 <div class="kontajner">
     <div class="kon2">
+    <table>
+        <tr>
+            <td>Poradie</td>
+            <td>Meno</td>
+            <!-- <td>Dátum pridania</td> -->
+            <td>Skóre</td>
+        </tr>
 @if(count($prihlaseniee)>0)
             <table>
                 <tr>
@@ -67,11 +81,26 @@ div.kontajner{
                     <td><p class="pismo">Skore</p></td>
                 </tr>
     @foreach($prihlaseniee as $prihlasenie)
-            <!--    <p class="pismo"> {{$prihlasenie->meno}}  - {{$prihlasenie->score}} </p>-->
-                <tr>
-                    <td><p class="pismo"> {{$prihlasenie->meno}}</p></td>
-                    <td><p class="pismo"> {{$prihlasenie->score}}</p></td>
-                </tr>
+table
+        <!-- <p class="pismo"> {{$prihlasenie->meno}}</p> -->
+        <table>
+        <tr>
+            <!-- <td>Poradie</td>
+            <td>Meno</td>
+            <td>Dátum pridania</td>
+            <td>Skóre</td> -->
+        </tr>
+            <tr>
+                <td>{{$prihlasenie->id}}</td>
+                <td>{{$prihlasenie->meno}}</td>
+                <!-- <td>{{$prihlasenie->created_at}}</td> -->
+                <td>{{$prihlasenie->score}}</td>
+            </tr>
+            <br><br>
+            <hr>
+    </table>
+      
+
     @endforeach
     </div>
 </div>

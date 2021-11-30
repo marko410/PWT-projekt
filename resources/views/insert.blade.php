@@ -12,12 +12,12 @@
         }
 
         div.megakantajner{
-            //border: 5px solid pink;
+            /* border: 5px solid pink; */
             background-color: rgba(0, 0, 255, 0.08);
             padding: 10px;
-            //margin: 30px;
+            /* margin: 30px; */
             margin-top: 50px;
-            //display:block;
+            /* display:block; */
             text-align: center;
             align-items: center;
             justify-content: center;
@@ -30,7 +30,7 @@
         }
 
         div.kontajner{
-           // border: 5px solid pink;
+            /* border: 5px solid pink; */
             background-color: rgba(0, 0, 255, 0.1);
             padding: 10px;
             margin: 10px;
@@ -43,8 +43,8 @@
 
             border-radius: 25px;
             border: 2px solid pink;
-            //width: 20%;
-            //right: -39%;
+            /* width: 20%; */
+            /* right: -39%; */
         }
 
         div.baton{
@@ -65,13 +65,14 @@
         }
         h1.nadpis{
             position: relative;
-            //left:2%;
+            /* left:2%; */
             font-size: 50px;
             text-align: center;
             font-family: 'Balthasar', sans-serif;
 
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         p.meno{
@@ -80,6 +81,7 @@
 
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -95,6 +97,7 @@
             font-family: 'Balthasar', sans-serif;
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     </style>
