@@ -12,12 +12,12 @@
         }
 
         div.megakantajner{
-            /* border: 5px solid pink; */
+           border: 5px solid pink; 
             background-color: rgba(0, 0, 255, 0.08);
             padding: 10px;
-            /* margin: 30px; */
+             margin: 30px; 
             margin-top: 50px;
-            /* display:block; */
+            display:block;
             text-align: center;
             align-items: center;
             justify-content: center;
@@ -30,7 +30,7 @@
         }
 
         div.kontajner{
-            /* border: 5px solid pink; */
+             border: 5px solid pink; 
             background-color: rgba(0, 0, 255, 0.1);
             padding: 10px;
             margin: 10px;
@@ -43,13 +43,13 @@
 
             border-radius: 25px;
             border: 2px solid pink;
-            /* width: 20%; */
-            /* right: -39%; */
+            
         }
 
         div.baton{
             margin-bottom: auto ;
             text-align: center;
+            
         }
         div.inp{
             text-align: center;
@@ -62,6 +62,8 @@
             box-sizing: border-box;
             border: 4px solid pink;
             border-radius: 5px;
+           
+    min-width:7em;
         }
         h1.nadpis{
             position: relative;
@@ -100,6 +102,8 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+    
     </style>
 
 </head>
@@ -127,7 +131,7 @@
 
 
     <div class="baton">
-        <button type="submit"  class="glow-on-hover"  >
+        <button type="submit"  class="glow-on-hover " >
             HRAJ!
         </button>
     </div>
