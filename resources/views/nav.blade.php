@@ -43,7 +43,7 @@
             color: black;
         }
         div.paticka{
-            
+            z-index: 1000;
             background-color: rgba(0, 0, 255, 0.2);
             position: fixed;
             bottom: 0%;

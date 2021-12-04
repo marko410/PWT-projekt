@@ -209,9 +209,10 @@ audio{
 
         <input class="styl" type="radio" id="Odpoved4"  name="odpoved1" value="Odpoved 4">
         <label for="Odpoved4">V žlčových uzlíkoch</label><br>
+        <button class="glow-on-hover" class="next" onclick="next(1)">NEXT</button>
     </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(1)">NEXT</button>
+    
 
 </div>
 
@@ -232,9 +233,10 @@ audio{
 
         <input class="styl" type="radio" id="Odpoved4"  name="odpoved2" value="Odpoved 4">
         <label for="Odpoved4">Vodnej pary</label><br>
+        <button class="glow-on-hover" class="next" onclick="next(2)">NEXT</button>
     </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(2)">NEXT</button>
+    
 
 </div>
 <!--
@@ -686,7 +688,7 @@ audio{
 
         <input type="hidden"  name="score" id="kkk"  value=""/>
         <input type="hidden" name="_token" value="{{csrf_token()}}">
-    <button type="submit" class="glow-on-hover" onclick="result()" >Vyhodnotenie</button>
+    <button type="submit" class="glow-on-hover" onclick="result()" >Koniec</button>
 
 </div>
 </form>

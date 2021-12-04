@@ -3,7 +3,8 @@
     <!DOCTYPE html>
 <html>
 <head>
-
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="../resources/css/main.css">
     <style>
         @import url('http://fonts.cdnfonts.com/css/balthazar');
 
