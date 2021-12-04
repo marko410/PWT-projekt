@@ -57,6 +57,9 @@ public function vlozScore(Request $request){
             return back()->with('error', 'Používateľské meno je obsadené!');
 
         }
+        if(strlen($request->input('meno','')>9)){
+            return back()->with('error', 'Maximálny povolený počet znakov je 9');
+        }
         else{
             $prihlasenie = new Prihlasenie();
             $prihlasenie->meno = $meno;
