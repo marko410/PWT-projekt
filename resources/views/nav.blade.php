@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="../resources/css/main.css">
     <style>
         body {
             margin: 0;
@@ -41,6 +43,7 @@
             color: black;
         }
         div.paticka{
+            
             background-color: rgba(0, 0, 255, 0.2);
             position: fixed;
             bottom: 0%;

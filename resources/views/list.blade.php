@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="../resources/css/main.css">
 
 
 
     <style>
+
+
+
+
+
         @import url('http://fonts.cdnfonts.com/css/balthazar');
         p.velkyfrajer{
 
@@ -13,30 +20,36 @@
             font-family: "Roboto", sans-serif;
             margin: 0 auto;*/
             font-size: 20px;
+            position: relative;
+            margin-top:auto;
             text-align: center;
             font-family: 'Balthasar', sans-serif;
-
+    
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         div.raketa{
-            /*border: 5px solid darkgray;
-            background-color: gray;
+            border: 5px solid pink;
+            border-radius: 10px;
+            background-color:rgba(0, 0, 255, 0.1);
             padding: 10px;
             margin: 10px;*/
             position: relative;
-            width: 100%;
-            right:43%;
+            text-align: center;
+            width:90%;
+            
         // background-color: rgba(0, 0, 255, 0.1);
-            margin-top: 5px;
+            margin-top: auto;
+            margin-left: auto;
             height: 30px;
         //padding: 0px;
 
         }
         body{
             background-image: url("bcg.jpeg");
+            
             /*margin: auto;
             width: 60%;
             border: 5px solid gray;
@@ -47,21 +60,25 @@
         .container {
             border: 3px solid pink;
             border-radius: 10px;
-            width: 60%;
+            width: 50%; 
             padding: 20px;
             display: none;
             text-align: center;
             background-color: rgba(0, 0, 255, 0.1);
-
+            margin-top:15%;
+            margin-bottom:50%;
             position: absolute;
             top: 50%;
             left: 50%;
-            margin-right: -50%;
+            margin-right: auto;
+            margin-left: auto;
             transform: translate(-50%, -50%)
         }
 
         button {
             margin-top: 10px;
+            margin-right: auto;
+            margin-left: auto;
         }
         img{
 
@@ -88,18 +105,22 @@
             padding: 10px;
             margin: 10px;
             margin-bottom: 45px;
+            
             display:block;
             text-align: center;
             justify-content: center;
             position: relative;
-            width: 40%;
-            right: -28%;
+            width: 50%;
+            right: -20%;
 
             border-radius: 25px;
             border: 2px solid pink;
         }
 
         .radio-toolbar {
+            
+            
+           
             margin: 10px;
         //display: block;
 
@@ -109,6 +130,7 @@
         }
 
         .radio-toolbar input[type="radio"] {
+            max-width:100%;
             opacity: 0;
             position: fixed;
             width: 20px;
@@ -117,6 +139,7 @@
         }
 
         .radio-toolbar label {
+            max-width:100%;
             display: inline-block;
             background: hotpink;
             padding: 10px 20px;
@@ -124,7 +147,7 @@
             font-size: 16px;
             border: 2px solid pink;
             border-radius: 4px;
-            width:180px;
+            width: 180px;;
             margin-bottom: 3px;
         }
 
@@ -156,10 +179,7 @@ audio{
 <body>
 
 
-<div class="raketa">
-    <p class="velkyfrajer">Ste prihlásený ako - {{$prihlasenie->meno}}</p>
 
-</div>
 
 <audio controls autoplay>
 
@@ -168,9 +188,13 @@ audio{
 </audio>
 
 <div class="container">
+<div class="raketa">
+    <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 
+</div>
     <div class="textik">Kde sa tvorí žlč?</div><hr>
-    <img src="obrázok1.jpg" width="450" height="400">
+
+    <img src="obrázok1.jpg" style="max-width:100%; height:auto;">
 
     <div class="kon2">
     <div class="radio-toolbar">
@@ -190,10 +214,10 @@ audio{
     <button class="glow-on-hover" class="next" onclick="next(1)">NEXT</button>
 
 </div>
-<!--
+
 <div class="container">
     <div class="textik">Vydychovaný vzduch obsahuje najviac?</div><hr>
-    <img src="obrázok2.jpg" width="450" height="400">
+    <img src="obrázok2.jpg"style="width:40%; height:auto;">
 
     <div class="kon2">
     <div class="radio-toolbar">
@@ -213,7 +237,7 @@ audio{
     <button class="glow-on-hover" class="next" onclick="next(2)">NEXT</button>
 
 </div>
-
+<!--
 <div class="container">
     <div class="textik">Koľko litrov krvi prečerpá za deň ľudské srdce?</div><hr>
     <img src="obrázok3.jpg" width="450" height="400">
@@ -758,9 +782,9 @@ audio{
 
     }
 
-
+   
 
 </script>
-
+ 
 </body>
 </html>

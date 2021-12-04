@@ -81,7 +81,7 @@ div.kontajner{
                     <td><p class="pismo">Skore</p></td>
                 </tr>
     @foreach($prihlaseniee as $prihlasenie)
-table
+
         <!-- <p class="pismo"> {{$prihlasenie->meno}}</p> -->
         <table>
         <tr>
