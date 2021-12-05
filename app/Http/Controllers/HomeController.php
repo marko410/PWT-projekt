@@ -14,6 +14,8 @@ class HomeController extends Controller
 
 
 public function vlozScore(Request $request){
+    sleep(2);
+
     $score = $request->input('score', '');
 
     $prihlasenie = Prihlasenie::latest('id')->first();

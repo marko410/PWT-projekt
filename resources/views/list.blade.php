@@ -4,7 +4,9 @@
 
 <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="../resources/css/main.css">
-
+    <link href="node_modules/sweetalert2/dist/sweetalert2.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     <style>
@@ -24,7 +26,7 @@
             margin-top:auto;
             text-align: center;
             font-family: 'Balthasar', sans-serif;
-    
+
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -39,7 +41,7 @@
             position: relative;
             text-align: center;
             width:90%;
-            
+
         // background-color: rgba(0, 0, 255, 0.1);
             margin-top: auto;
             margin-left: auto;
@@ -49,7 +51,7 @@
         }
         body{
             background-image: url("bcg.jpeg");
-            
+
             /*margin: auto;
             width: 60%;
             border: 5px solid gray;
@@ -60,7 +62,7 @@
         .container {
             border: 3px solid pink;
             border-radius: 10px;
-            width: 50%; 
+            width: 50%;
             padding: 20px;
             display: none;
             text-align: center;
@@ -105,7 +107,7 @@
             padding: 10px;
             margin: 10px;
             margin-bottom: 45px;
-            
+
             display:block;
             text-align: center;
             justify-content: center;
@@ -118,9 +120,9 @@
         }
 
         .radio-toolbar {
-            
-            
-           
+
+
+
             margin: 10px;
         //display: block;
 
@@ -181,11 +183,11 @@ audio{
 
 
 
-<audio controls autoplay>
+<!--<audio controls autoplay>
 
     <source src="riadna_songovica.mp3" type="audio/mpeg">
 
-</audio>
+</audio>-->
 
 <div class="container">
 <div class="raketa">
@@ -212,7 +214,7 @@ audio{
         <button class="glow-on-hover" class="next" onclick="next(1)">NEXT</button>
     </div>
     </div>
-    
+
 
 </div>
 
@@ -236,7 +238,7 @@ audio{
         <button class="glow-on-hover" class="next" onclick="next(2)">NEXT</button>
     </div>
     </div>
-    
+
 
 </div>
 <!--
@@ -666,6 +668,7 @@ audio{
 -->
 <!--<otazka20-->
 <form method="post" action="{{route('list3')}}">
+
 <div class="container">
     <div class="textik">Ktorý faktor sa najviac podieľa na vzniku ochorení pľúc?</div><hr>
     <img src="obrázok20.jpg" width="450" height="400">
@@ -686,8 +689,10 @@ audio{
         </div>
     </div>
 
-        <input type="hidden"  name="score" id="kkk"  value=""/>
+        <input type="hidden"   name="score" id="kkk"  value=""/>
+
         <input type="hidden" name="_token" value="{{csrf_token()}}">
+
     <button type="submit" class="glow-on-hover" onclick="result()" >Koniec</button>
 
 </div>
@@ -695,7 +700,7 @@ audio{
 
 <!--koniec-->
 
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     // displaying the first block of question
     document.getElementsByClassName('container')[0].style.display = "block";
@@ -771,22 +776,60 @@ audio{
 
       /*  if (document.getElementById('correct20').value) {
             score++;
-            alert("your score is: "+ score);
+
         }*/
         if (document.getElementById('correct20').checked) {
             skore=skore+1;
             document.getElementById('kkk').value = skore;
 
-            alert("your score is: "+ skore);
+            //alert("your score is: "+ skore);
+
         }
         //document.getElementById('correct20').value = skore;
         //alert("your score is: "+ skore);
 
+
+        if (skore >= 17) {
+            Swal.fire({
+                title: 'Super, si bombový',
+                text: 'tvoje skore : ' + skore,
+                imageUrl: 'https://i0.wp.com/www.printmag.com/wp-content/uploads/2021/02/4cbe8d_f1ed2800a49649848102c68fc5a66e53mv2.gif?fit=476%2C280&ssl=1',
+                imageSize: "200*200",
+                imageWidth:220,
+            }).then(function(){
+
+                window.location="select-all";
+            })
+        }
+        if (skore <= 16 && skore>=10) {
+            Swal.fire({
+                title: 'Dobre ale máš rezervy',
+                text: 'tvoje skore : ' + skore,
+                imageUrl: 'https://cdn.hornbach.sk/data/shop/D04/001/780/491/703/032/DV_8_10141178_01_4c_DE_20191206175111.jpg',
+                imageSize: "200*200",
+                imageWidth:220,
+            }).then(function(){
+                window.location="select-all";
+            })
+        }
+        if (skore <= 9) {
+            Swal.fire({
+                title: 'Slabota, polepši sa',
+                text: 'tvoje skore : ' + skore,
+                imageUrl: 'https://mp3zvuky.cz/wp-content/uploads/2019/01/krava.jpg',
+                imageSize: "200*200",
+                imageWidth:220,
+
+            }).then(function(){
+                window.location="select-all";
+            })
+        }
+
     }
 
-   
+
 
 </script>
- 
+
 </body>
 </html>
