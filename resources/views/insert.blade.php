@@ -15,16 +15,18 @@
            border: 5px solid pink; 
             background-color: rgba(0, 0, 255, 0.08);
             padding: 10px;
-             margin: 30px; 
-            margin-top: 50px;
+          
+           
+    margin-bottom: 39px;
+           
             display:block;
             text-align: center;
             align-items: center;
             justify-content: center;
-            position: relative;
-            width: 40%;
+            position:relative;
+            width: 60%;
             height: 280px;
-            right: -30%;
+            right: -16%;
             border-radius: 25px;
             border: 2px solid pink;
         }
@@ -40,14 +42,15 @@
             align-items: center;
             justify-content: center;
             position: relative;
-
+            
             border-radius: 25px;
             border: 2px solid pink;
             
         }
 
         div.baton{
-            margin-bottom: auto ;
+            margin-top:10px;
+            margin-bottom: 10px ;
             text-align: center;
             
         }
@@ -110,15 +113,21 @@
 <body>
 @include('nav')
 <form method="post" action="{{route('insert')}}">
-
+<div class="kontajner">
     <h1 class="nadpis">Vedecký Quiz</h1>
     <div class="megakantajner">
-    <div class="kontajner">
+    
         <p class="meno">Meno </p><br>
         <div class="inp">
-            <input type="text" name="meno" placeholder="meno" ><br>
+            <input type="text" name="meno" placeholder="Meno" ><br>
         </div>
-        <input type="hidden" name="_token" value="{{csrf_token()}}">
+        <input type="hidden" name="_token" value="{{csrf_token()}}"> 
+        
+        <div class="baton">
+        <button type="submit"  class="glow-on-hover ">
+            HRAJ!
+        </button>
+    </div>
     </div>
 
         @if(session()->has('error'))
@@ -130,11 +139,7 @@
         @endif
 
 
-    <div class="baton">
-        <button type="submit"  class="glow-on-hover " >
-            HRAJ!
-        </button>
-    </div>
+   
 
     </div>
 </form>

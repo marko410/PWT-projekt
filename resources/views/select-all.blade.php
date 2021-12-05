@@ -24,8 +24,12 @@
         }
 
         table{
-        border: 1px solid black;
+        border: 3px  pink;
         width: 100%;
+        background: -webkit-linear-gradient(#f17109, #b004da);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
 
@@ -33,14 +37,15 @@ div.kontajner{
    background-color: rgba(0, 0, 255, 0.1);
 
     padding: 10px;
-    margin: 20px;
+    margin: center;
     margin-top: 50px;
+    right:-38%;
     text-align: center;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 40%;
-    right: -30%;
+    width:20%;
+  
 
     border-radius: 25px;
     border: 2px solid pink;
@@ -55,27 +60,45 @@ div.kontajner{
             text-align: left;
             justify-content: center;
             position: relative;
-        width: 40%;
-        right: -28%;
+       
+      
 
             border-radius: 25px;
             border: 2px solid pink;
         }
+
+        @media only screen and (max-width: 600px) {
+ 
+
+            div.kon2 {
+            width:100%;
+            right:0;
+            margin: 0;
+            padding:0;
+            top:-7px;
+
+                }
+
+                div.kontajner{
+                    right: -6%;
+                    width: 80%;
+                    margin-top: 9px;
+
+
+                }
+ 
+
+}
+
+
+
     </style>
 
 </head>
 
 <body>
 <div class="kontajner">
-    <div class="kon2">
-    <table>
-        <tr>
-            <td>Poradie</td>
-            <td>Meno</td>
-            <!-- <td>Dátum pridania</td> -->
-            <td>Skóre</td>
-        </tr>
-@if(count($prihlaseniee)>0)
+    <div class="kon2">@if(count($prihlaseniee)>0)
             <table>
                 <tr>
                     <td><p class="pismo">Meno</p></td>
@@ -85,12 +108,15 @@ div.kontajner{
 
         <!-- <p class="pismo"> {{$prihlasenie->meno}}</p> -->
         <table>
+    <table>
         <tr>
-            <!-- <td>Poradie</td>
+            <td>Poradie</td>
             <td>Meno</td>
-            <td>Dátum pridania</td>
-            <td>Skóre</td> -->
+            <!-- <td>Dátum pridania</td> -->
+            <td>Skóre</td>
         </tr>
+
+      
             <tr>
                 <td>{{$prihlasenie->id}}</td>
                 <td>{{$prihlasenie->meno}}</td>

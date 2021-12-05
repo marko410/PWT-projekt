@@ -37,22 +37,22 @@
             border-radius: 10px;
             background-color:rgba(0, 0, 255, 0.1);
             padding: 10px;
-            margin: 10px;*/
+            margin: 5px;
             position: relative;
             text-align: center;
             width:90%;
-
+          
         // background-color: rgba(0, 0, 255, 0.1);
-            margin-top: auto;
+           
             margin-left: auto;
-            height: 30px;
+            height: 20px;
         //padding: 0px;
 
         }
         body{
             background-image: url("bcg.jpeg");
-
-            /*margin: auto;
+/*
+            margin: auto;
             width: 60%;
             border: 5px solid gray;
             background-color: dimgray;
@@ -62,36 +62,37 @@
         .container {
             border: 3px solid pink;
             border-radius: 10px;
-            width: 50%;
+            width: 80%;
             padding: 20px;
             display: none;
             text-align: center;
             background-color: rgba(0, 0, 255, 0.1);
-            margin-top:15%;
+            margin-top:25%;
             margin-bottom:50%;
             position: absolute;
-            top: 50%;
+            top:10px;
             left: 50%;
             margin-right: auto;
             margin-left: auto;
             transform: translate(-50%, -50%)
+  
         }
 
         button {
-            margin-top: 10px;
+            margin-top: 8px;
             margin-right: auto;
             margin-left: auto;
         }
         img{
 
             justify-content: right;
-            margin-bottom: 50px;
+            margin-bottom: 5px;
             left: 50%;
             border: 3px solid pink;
 
         }
         div.textik{
-            font-size: 35px;
+            font-size: 25px;
             text-align: center;
             font-family: 'Balthasar', sans-serif;
 
@@ -106,8 +107,7 @@
             background-color: rgba(0, 0, 255, 0.1);
             padding: 10px;
             margin: 10px;
-            margin-bottom: 45px;
-
+            margin-bottom: 10px;
             display:block;
             text-align: center;
             justify-content: center;
@@ -122,8 +122,7 @@
         .radio-toolbar {
 
 
-
-            margin: 10px;
+            margin: 7px;
         //display: block;
 
         }
@@ -134,9 +133,10 @@
         .radio-toolbar input[type="radio"] {
             max-width:100%;
             opacity: 0;
-            position: fixed;
+            position:fixed;
             width: 20px;
             height: 20px;
+           /* right:30%*/
 
         }
 
@@ -147,9 +147,10 @@
             padding: 10px 20px;
             font-family: sans-serif, B;
             font-size: 16px;
+            text-align: center;
             border: 2px solid pink;
             border-radius: 4px;
-            width: 180px;;
+            width: 40%;
             margin-bottom: 3px;
         }
 
@@ -169,6 +170,35 @@
 
 audio{
     opacity:0;
+    volume: 0.1,
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+ 
+    .container{
+        width: 90%;
+        top:277px
+    }
+
+div.kon2 {
+    width:100%;
+    right:0;
+    margin: 0;
+    padding:0;
+    top:-7px;
+
+}
+
+div.raketa{
+top:-21px;
+
+}
+
+    
+
 }
 
 
@@ -183,26 +213,27 @@ audio{
 
 
 
-<!--<audio controls autoplay>
+<audio controls autoplay>
 
-    <source src="riadna_songovica.mp3" type="audio/mpeg">
+    <source src="squidgame.mp3" type="audio/mpeg">
 
-</audio>-->
+</audio>
 
 <div class="container">
 <div class="raketa">
     <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 
 </div>
-    <div class="textik">Kde sa tvorí žlč?</div><hr>
-
-    <img src="obrázok1.jpg" style="max-width:100%; height:auto;">
-
+    
     <div class="kon2">
-    <div class="radio-toolbar">
+
+    
+        <div class="textik">Kde sa tvorí žlč?</div><hr>
+
+        <img src="obrázok1.jpg" style="max-width:50%; height:170px;">
+ <div class="radio-toolbar">
         <input class="styl" type="radio" id="correct1" name="odpoved1" value="Odpoved 1" >
         <label for="Odpoved1">V pečeni</label><br>
-
         <input class="styl" type="radio" id="Odpoved2"  name="odpoved1"  value="Odpoved 2">
         <label for="Odpoved2">V žlčníku</label><br>
 
@@ -214,15 +245,16 @@ audio{
         <button class="glow-on-hover" class="next" onclick="next(1)">NEXT</button>
     </div>
     </div>
-
+    </div>
 
 </div>
 
 <div class="container">
-    <div class="textik">Vydychovaný vzduch obsahuje najviac?</div><hr>
-    <img src="obrázok2.jpg"style="width:40%; height:auto;">
+    
 
     <div class="kon2">
+        <div class="textik">Vydychovaný vzduch obsahuje najviac?</div><hr>
+    <img src="obrázok2.jpg"style="max-width:50%; height:170px;">
     <div class="radio-toolbar">
         <input class="styl" type="radio" id="Odpoved1" name="odpoved2" value="Odpoved 1" >
         <label for="Odpoved1">Kyslíku</label><br>
@@ -259,9 +291,10 @@ audio{
 
         <input class="styl" type="radio" id="correct3"  name="odpoved3" value="Odpoved 4">
         <label for="Odpoved4">7500</label><br>
+        <button class="glow-on-hover" class="next" onclick="next(3)">NEXT</button>
     </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(3)">NEXT</button>
+    
 
 
 </div>
@@ -284,9 +317,10 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved4" value="Odpoved 4">
             <label for="Odpoved4">Pľúca</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(4)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(4)">NEXT</button>
+    
 
 </div>
 
@@ -310,9 +344,10 @@ audio{
 
             <input class="styl" type="radio" id="correct5"  name="odpoved5" value="Odpoved 4">
             <label for="Odpoved4">0</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(5)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(5)">NEXT</button>
+    
 
 </div>
 
@@ -334,10 +369,11 @@ audio{
             <label for="Odpoved3">40 000</label><br>
 
             <input class="styl" type="radio" id="correct6"  name="odpoved6" value="Odpoved 4">
-            <label for="Odpoved4">50 000</label><br>
+            <label for="Odpoved4">50 000</label><br> 
+            <button class="glow-on-hover" class="next" onclick="next(6)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(6)">NEXT</button>
+   
 
 </div>
 
@@ -360,9 +396,10 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved7" value="Odpoved 4">
             <label for="Odpoved4">Dýchací reflex</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(7)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(7)">NEXT</button>
+    
 
 </div>
 
@@ -384,10 +421,11 @@ audio{
             <label for="Odpoved3">Fabio Quagliarella</label><br>
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved8" value="Odpoved 4">
-            <label for="Odpoved4">Cranionella</label><br>
+            <label for="Odpoved4">Cranionella</label><br> 
+            <button class="glow-on-hover" class="next" onclick="next(8)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(8)">NEXT</button>
+   
 
 </div>
 
@@ -409,10 +447,11 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved9" value="Odpoved 4">
             <label for="Odpoved4"> Stoličky</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(9)">NEXT</button>
+
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(9)">NEXT</button>
-
+    
 </div>
 
 
@@ -433,10 +472,11 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved10" value="Odpoved 4">
             <label for="Odpoved4">38</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(10)">NEXT</button>
+
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(10)">NEXT</button>
-
+    
 </div>
 
 
@@ -458,9 +498,10 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved11" value="Odpoved 4">
             <label for="Odpoved4">V kolene</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(11)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(11)">NEXT</button>
+    
 
 </div>
 
@@ -483,9 +524,10 @@ audio{
 
             <input class="styl" type="radio" id="correct12"  name="odpoved12" value="Odpoved 4">
             <label for="Odpoved4">Hrudnú kosť</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(12)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(12)">NEXT</button>
+    
 
 </div>
 
@@ -508,10 +550,11 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved13" value="Odpoved 4">
             <label for="Odpoved4">Lymfodrenážny prístroj</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(13)">NEXT</button>
+
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(13)">NEXT</button>
-
+    
 </div>
 
 
@@ -533,9 +576,10 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved14" value="Odpoved 4">
             <label for="Odpoved4">Hubovitá kosť</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(14)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(14)">NEXT</button>
+    
 
 </div>
 
@@ -558,10 +602,11 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved15" value="Odpoved 4">
             <label for="Odpoved4">Okostica</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(15)">NEXT</button>
+
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(15)">NEXT</button>
-
+    
 </div>
 
 
@@ -583,9 +628,10 @@ audio{
 
             <input class="styl" type="radio" id="correct16"  name="odpoved16" value="Odpoved 4">
             <label for="Odpoved4">Terapeut</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(16)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(16)">NEXT</button>
+    
 
 </div>
 
@@ -609,9 +655,10 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved17" value="Odpoved 4">
             <label for="Odpoved4">33</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(17)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(17)">NEXT</button>
+    
 
 </div>
 
@@ -634,10 +681,11 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved18" value="Odpoved 4">
             <label for="Odpoved4">Nočná mora</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(18)">NEXT</button>
+
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(18)">NEXT</button>
-
+    
 </div>
 
 
@@ -659,9 +707,10 @@ audio{
 
             <input class="styl" type="radio" id="correct19"  name="odpoved19" value="Odpoved 4">
             <label for="Odpoved4">Ochorenia uší, nosa, hrtana a hltana</label><br>
+            <button class="glow-on-hover" class="next" onclick="next(19)">NEXT</button>
         </div>
     </div>
-    <button class="glow-on-hover" class="next" onclick="next(19)">NEXT</button>
+    
 
 </div>
 
@@ -671,7 +720,7 @@ audio{
 
 <div class="container">
     <div class="textik">Ktorý faktor sa najviac podieľa na vzniku ochorení pľúc?</div><hr>
-    <img src="obrázok20.jpg" width="450" height="400">
+    <img src="obrázok20.jpg" style="max-width:50%; height:170px;">
 
     <div class="kon2">
         <div class="radio-toolbar">
@@ -686,15 +735,18 @@ audio{
 
             <input class="styl" type="radio" id="Odpoved4 "  name="odpoved20" value="Odpoved 4">
             <label for="Odpoved4">Konzumácia alkoholu</label><br>
-        </div>
-    </div>
 
-        <input type="hidden"   name="score" id="kkk"  value=""/>
+ <input type="hidden"   name="score" id="kkk"  value=""/>
 
         <input type="hidden" name="_token" value="{{csrf_token()}}">
 
     <button type="submit" class="glow-on-hover" onclick="result()" >Koniec</button>
 
+
+        </div>
+    </div>
+
+       
 </div>
 </form>
 
