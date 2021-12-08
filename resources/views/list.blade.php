@@ -41,9 +41,9 @@
             position: relative;
             text-align: center;
             width:90%;
-          
+
         // background-color: rgba(0, 0, 255, 0.1);
-           
+
             margin-left: auto;
             height: 20px;
         //padding: 0px;
@@ -75,7 +75,7 @@
             margin-right: auto;
             margin-left: auto;
             transform: translate(-50%, -50%)
-  
+
         }
 
         button {
@@ -169,7 +169,7 @@
 
 
 audio{
-    opacity:0;
+    opacity:100;
     volume: 0.1,
 }
 
@@ -177,7 +177,7 @@ audio{
 
 
 @media only screen and (max-width: 600px) {
- 
+
     .container{
         width: 90%;
         top:277px
@@ -197,7 +197,7 @@ top:-21px;
 
 }
 
-    
+
 
 }
 
@@ -224,10 +224,10 @@ top:-21px;
     <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 
 </div>
-    
+
     <div class="kon2">
 
-    
+
         <div class="textik">Kde sa tvorí žlč?</div><hr>
 
         <img src="obrázok1.jpg" style="max-width:50%; height:170px;">
@@ -250,7 +250,7 @@ top:-21px;
 </div>
 
 <div class="container">
-    
+
 
     <div class="kon2">
         <div class="textik">Vydychovaný vzduch obsahuje najviac?</div><hr>
@@ -294,7 +294,7 @@ top:-21px;
         <button class="glow-on-hover" class="next" onclick="next(3)">NEXT</button>
     </div>
     </div>
-    
+
 
 
 </div>
@@ -320,7 +320,7 @@ top:-21px;
             <button class="glow-on-hover" class="next" onclick="next(4)">NEXT</button>
         </div>
     </div>
-    
+
 
 </div>
 
@@ -347,7 +347,7 @@ top:-21px;
             <button class="glow-on-hover" class="next" onclick="next(5)">NEXT</button>
         </div>
     </div>
-    
+
 
 </div>
 
@@ -369,11 +369,11 @@ top:-21px;
             <label for="Odpoved3">40 000</label><br>
 
             <input class="styl" type="radio" id="correct6"  name="odpoved6" value="Odpoved 4">
-            <label for="Odpoved4">50 000</label><br> 
+            <label for="Odpoved4">50 000</label><br>
             <button class="glow-on-hover" class="next" onclick="next(6)">NEXT</button>
         </div>
     </div>
-   
+
 
 </div>
 
@@ -399,7 +399,7 @@ top:-21px;
             <button class="glow-on-hover" class="next" onclick="next(7)">NEXT</button>
         </div>
     </div>
-    
+
 
 </div>
 
@@ -421,11 +421,11 @@ top:-21px;
             <label for="Odpoved3">Fabio Quagliarella</label><br>
 
             <input class="styl" type="radio" id="Odpoved4"  name="odpoved8" value="Odpoved 4">
-            <label for="Odpoved4">Cranionella</label><br> 
+            <label for="Odpoved4">Cranionella</label><br>
             <button class="glow-on-hover" class="next" onclick="next(8)">NEXT</button>
         </div>
     </div>
-   
+
 
 </div>
 
@@ -451,7 +451,7 @@ top:-21px;
 
         </div>
     </div>
-    
+
 </div>
 
 
@@ -476,7 +476,7 @@ top:-21px;
 
         </div>
     </div>
-    
+
 </div>
 
 
@@ -501,7 +501,7 @@ top:-21px;
             <button class="glow-on-hover" class="next" onclick="next(11)">NEXT</button>
         </div>
     </div>
-    
+
 
 </div>
 
@@ -527,7 +527,7 @@ top:-21px;
             <button class="glow-on-hover" class="next" onclick="next(12)">NEXT</button>
         </div>
     </div>
-    
+
 
 </div>
 
@@ -554,7 +554,7 @@ top:-21px;
 
         </div>
     </div>
-    
+
 </div>
 
 
@@ -579,7 +579,7 @@ top:-21px;
             <button class="glow-on-hover" class="next" onclick="next(14)">NEXT</button>
         </div>
     </div>
-    
+
 
 </div>
 
@@ -606,7 +606,7 @@ top:-21px;
 
         </div>
     </div>
-    
+
 </div>
 
 
@@ -631,7 +631,7 @@ top:-21px;
             <button class="glow-on-hover" class="next" onclick="next(16)">NEXT</button>
         </div>
     </div>
-    
+
 
 </div>
 
@@ -658,7 +658,7 @@ top:-21px;
             <button class="glow-on-hover" class="next" onclick="next(17)">NEXT</button>
         </div>
     </div>
-    
+
 
 </div>
 
@@ -685,7 +685,7 @@ top:-21px;
 
         </div>
     </div>
-    
+
 </div>
 
 
@@ -710,7 +710,7 @@ top:-21px;
             <button class="glow-on-hover" class="next" onclick="next(19)">NEXT</button>
         </div>
     </div>
-    
+
 
 </div>
 
@@ -746,7 +746,7 @@ top:-21px;
         </div>
     </div>
 
-       
+
 </div>
 </form>
 
@@ -771,79 +771,99 @@ top:-21px;
             skore=skore+1;
             document.getElementById('kkk').value = skore;
         }
-        /*if (document.getElementById('correct2').checked) {
-            score++;
+        if (document.getElementById('correct2').checked) {
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
+        /*
         if (document.getElementById('correct3').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct4').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct5').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct6').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct7').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct8').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct9').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct10').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct11').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct12').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct13').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct14').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct15').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct16').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct17').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct18').checked) {
-            score++;
+            skore=skore+1;
+            document.getElementById('kkk').value = skore;
         }
         if (document.getElementById('correct19').checked) {
-            score=score+2;
+            skore=skore+2;
+            document.getElementById('kkk').value = skore;
         }*/
 
       /*  if (document.getElementById('correct20').value) {
-            score++;
+            skore++;
+            document.getElementById('kkk').value = skore;
 
         }*/
         if (document.getElementById('correct20').checked) {
             skore=skore+1;
             document.getElementById('kkk').value = skore;
 
-            //alert("your score is: "+ skore);
+
 
         }
         //document.getElementById('correct20').value = skore;
-        //alert("your score is: "+ skore);
+
 
 
         if (skore >= 17) {
             Swal.fire({
-                title: 'Super, si bombový',
+                title: 'Pacient prežil',
                 text: 'tvoje skore : ' + skore,
                 imageUrl: 'https://i0.wp.com/www.printmag.com/wp-content/uploads/2021/02/4cbe8d_f1ed2800a49649848102c68fc5a66e53mv2.gif?fit=476%2C280&ssl=1',
                 imageSize: "200*200",
@@ -855,7 +875,7 @@ top:-21px;
         }
         if (skore <= 16 && skore>=10) {
             Swal.fire({
-                title: 'Dobre ale máš rezervy',
+                title: 'Pacient ešte dýcha',
                 text: 'tvoje skore : ' + skore,
                 imageUrl: 'https://cdn.hornbach.sk/data/shop/D04/001/780/491/703/032/DV_8_10141178_01_4c_DE_20191206175111.jpg',
                 imageSize: "200*200",
@@ -866,7 +886,7 @@ top:-21px;
         }
         if (skore <= 9) {
             Swal.fire({
-                title: 'Slabota, polepši sa',
+                title: 'Pacient zomrel',
                 text: 'tvoje skore : ' + skore,
                 imageUrl: 'https://mp3zvuky.cz/wp-content/uploads/2019/01/krava.jpg',
                 imageSize: "200*200",
