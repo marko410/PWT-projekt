@@ -168,9 +168,9 @@
         }
 
 
-audio{
+audio.jou{
     opacity:100;
-    volume: 0.1,
+    volume: 0.05;
 }
 
 
@@ -180,7 +180,7 @@ audio{
 
     .container{
         width: 90%;
-        top:277px
+        top:315px;
     }
 
 div.kon2 {
@@ -201,7 +201,9 @@ top:-21px;
 
 }
 
-
+img.tlacidloZvuk{
+   margin:1%;
+}
 
 
     </style>
@@ -213,11 +215,32 @@ top:-21px;
 
 
 
-<audio controls autoplay>
+<!--<audio controls autoplay class="jou">
 
-    <source src="squidgame.mp3" type="audio/mpeg">
+    <source src="najvacsa_pecka.mp3" type="audio/mpeg">
+</audio>-->
+<img class="tlacidloZvuk" onclick="VypniMuzicku()" src="M_On.gif" width="3%">
+<audio id="vypaluvacka" src="najvacsa_pecka.mp3" preload="auto"></audio>
 
-</audio>
+<script>
+
+        var KdePakTyPtacku = document.getElementById("vypaluvacka");
+        KdePakTyPtacku.volume=0.2;
+        KdePakTyPtacku.play();
+
+
+    function VypniMuzicku(){
+        var KdePakTyPtacku = document.getElementById("vypaluvacka");
+        if(KdePakTyPtacku.volume===0.2){
+            KdePakTyPtacku.volume=0.0;
+        }else{
+            KdePakTyPtacku.volume=0.2
+        }
+
+    }
+
+</script>
+
 
 <div class="container">
 <div class="raketa">
@@ -716,6 +739,7 @@ top:-21px;
 
 -->
 <!--<otazka20-->
+<audio id="hitovica" src="melody.wav" preload="auto"></audio>
 <form method="post" action="{{route('list3')}}">
 
 <div class="container">
@@ -740,7 +764,7 @@ top:-21px;
 
         <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-    <button type="submit" class="glow-on-hover" onclick="result()" >Koniec</button>
+    <button type="submit" class="glow-on-hover" onclick="result()" > Koniec </button>
 
 
         </div>
@@ -765,6 +789,10 @@ top:-21px;
     //getting final result
 
     function result() {
+        var hitovica1 = document.getElementById("hitovica");
+            hitovica1.play();
+
+
         var skore = 0;
         if (document.getElementById('correct1').checked) {
            //score++;

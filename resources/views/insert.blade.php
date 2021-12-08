@@ -12,13 +12,13 @@
         }
 
         div.megakantajner{
-           border: 5px solid pink; 
+           border: 5px solid pink;
             background-color: rgba(0, 0, 255, 0.08);
             padding: 10px;
-          
-           
+
+
     margin-bottom: 39px;
-           
+
             display:block;
             text-align: center;
             align-items: center;
@@ -32,7 +32,7 @@
         }
 
         div.kontajner{
-             border: 5px solid pink; 
+             border: 5px solid pink;
             background-color: rgba(0, 0, 255, 0.1);
             padding: 10px;
             margin: 10px;
@@ -42,17 +42,17 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            
+
             border-radius: 25px;
             border: 2px solid pink;
-            
+
         }
 
         div.baton{
             margin-top:10px;
             margin-bottom: 10px ;
             text-align: center;
-            
+
         }
         div.inp{
             text-align: center;
@@ -65,7 +65,7 @@
             box-sizing: border-box;
             border: 4px solid pink;
             border-radius: 5px;
-           
+
     min-width:7em;
         }
         h1.nadpis{
@@ -106,7 +106,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-    
+
     </style>
 
 </head>
@@ -116,34 +116,45 @@
 <div class="kontajner">
     <h1 class="nadpis">Vedecký Quiz</h1>
     <div class="megakantajner">
-    
+
         <p class="meno">Meno </p><br>
         <div class="inp">
             <input type="text" name="meno" placeholder="Meno" ><br>
         </div>
-        <input type="hidden" name="_token" value="{{csrf_token()}}"> 
-        
+        <input type="hidden" name="_token" value="{{csrf_token()}}">
+
         <div class="baton">
-        <button type="submit"  class="glow-on-hover ">
+        <button type="submit"  class="glow-on-hover" onclick="audijko()" >
             HRAJ!
         </button>
     </div>
     </div>
+    <audio id="hitovicka" src="infosound.wav" preload="auto"></audio>
 
         @if(session()->has('error'))
             <div class="omg">
                 <div class="alert alert-danger" >
+                    <script>
+                        var hitovica2 = document.getElementById("hitovicka");
+                        hitovica2.play();
+                    </script>
                     {{ session()->get('error') }}
                 </div>
             </div>
         @endif
 
 
-   
+
 
     </div>
 </form>
-
+<audio id="hitovicarna" src="playsound.wav" preload="auto"></audio>
+<script>
+    function audijko(){
+        var hitovica4 = document.getElementById("hitovicarna");
+        hitovica4.play();
+    }
+</script>
 
 
 </body>
