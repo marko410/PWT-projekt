@@ -45,10 +45,16 @@ div.kontajner{
     justify-content: center;
     position: relative;
     width:20%;
-  
+
 
     border-radius: 25px;
     border: 2px solid pink;
+
+
+    height: 600px;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
 }
         div.kon2{
         /* border: 5px solid pink; */
@@ -60,15 +66,15 @@ div.kontajner{
             text-align: left;
             justify-content: center;
             position: relative;
-       
-      
+
+
 
             border-radius: 25px;
             border: 2px solid pink;
         }
 
-        @media only screen and (max-width: 600px) {
- 
+        @media only screen and (max-width: 800px) {
+
 
             div.kon2 {
             width:100%;
@@ -86,7 +92,7 @@ div.kontajner{
 
 
                 }
- 
+
 
 }
 
@@ -116,7 +122,7 @@ div.kontajner{
             <td>Skóre</td>
         </tr>
 
-      
+
             <tr>
                 <td>{{$prihlasenie->id}}</td>
                 <td>{{$prihlasenie->meno}}</td>
@@ -126,7 +132,7 @@ div.kontajner{
             <br><br>
             <hr>
     </table>
-      
+
 
     @endforeach
     </div>
