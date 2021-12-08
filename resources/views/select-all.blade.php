@@ -3,7 +3,7 @@
     <!DOCTYPE html>
 <html>
 <head>
-<meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="../resources/css/main.css">
     <style>
         @import url('http://fonts.cdnfonts.com/css/balthazar');
@@ -24,45 +24,42 @@
         }
 
         table{
-        border: 3px  pink;
-        width: 100%;
-        background: -webkit-linear-gradient(#f17109, #b004da);
+            border: 3px  pink;
+            width: 100%;
+            background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
 
-div.kontajner{
-   background-color: rgba(0, 0, 255, 0.1);
+        div.kontajner{
+            background-color: rgba(0, 0, 255, 0.1);
 
-    padding: 10px;
-    margin: center;
-    margin-top: 25px;
-    right:-4%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-<<<<<<< HEAD
-    width:90%;
-  
-=======
-    width:20%;
-
->>>>>>> feature/Scroll__bar
-
-    border-radius: 25px;
-    border: 2px solid pink;
+            padding: 10px;
+            margin: center;
+            margin-top: 25px;
+            right:-4%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width:90%;
 
 
-    height: 600px;
-    overflow-y: scroll;
-    scrollbar-color: rebeccapurple green;
-    scrollbar-width: thin;
-}
+            border-radius: 25px;
+            border: 2px solid pink;
+
+            width: 50%;
+            right: -25%;
+            height: 700px;
+            overflow-y: scroll;
+            scrollbar-color: rebeccapurple green;
+            scrollbar-width: thin;
+
+        }
         div.kon2{
-        /* border: 5px solid pink; */
+            /* border: 5px solid pink; */
             background-color: rgba(0, 0, 255, 0.1);
             padding: 10px;
             margin: 10px;
@@ -71,41 +68,36 @@ div.kontajner{
             text-align: left;
             justify-content: center;
             position: relative;
-<<<<<<< HEAD
             width: 50%;
             right: -22%;
-      
-=======
 
-
->>>>>>> feature/Scroll__bar
 
             border-radius: 25px;
             border: 2px solid pink;
         }
 
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 600px) {
 
 
             div.kon2 {
-            width:100%;
-            right:0;
-            margin: 0;
-            padding:0;
-            top:-7px;
+                width:100%;
+                right:0;
+                margin: 0;
+                padding:0;
+                top:-7px;
 
-                }
+            }
 
-                div.kontajner{
-                    right: -6%;
-                    width: 80%;
-                    margin-top: 9px;
-
-
-                }
+            div.kontajner{
+                right: -6%;
+                width: 80%;
+                margin-top: 9px;
 
 
-}
+            }
+
+
+        }
 
 
 
@@ -121,45 +113,45 @@ div.kontajner{
                     <td><p class="pismo">Meno</p></td>
                     <td><p class="pismo">Skore</p></td>
                 </tr>
-    @foreach($prihlaseniee as $prihlasenie)
+            @foreach($prihlaseniee as $prihlasenie)
 
-        <!-- <p class="pismo"> {{$prihlasenie->meno}}</p> -->
-        <table>
-    <table>
-        <tr>
-            <td>Poradie</td>
-            <td>Meno</td>
-            <!-- <td>Dátum pridania</td> -->
-            <td>Skóre</td>
-        </tr>
-
-
-            <tr>
-                <td>{{$prihlasenie->id}}</td>
-                <td>{{$prihlasenie->meno}}</td>
-                <!-- <td>{{$prihlasenie->created_at}}</td> -->
-                <td>{{$prihlasenie->score}}</td>
-            </tr>
-            <br><br>
-            <hr>
-    </table>
+                <!-- <p class="pismo"> {{$prihlasenie->meno}}</p> -->
+                    <table>
+                        <table>
+                            <tr>
+                                <td>Poradie</td>
+                                <td>Meno</td>
+                                <!-- <td>Dátum pridania</td> -->
+                                <td>Skóre</td>
+                            </tr>
 
 
-    @endforeach
+                            <tr>
+                                <td>{{$prihlasenie->id}}</td>
+                                <td>{{$prihlasenie->meno}}</td>
+                            <!-- <td>{{$prihlasenie->created_at}}</td> -->
+                                <td>{{$prihlasenie->score}}</td>
+                            </tr>
+                            <br><br>
+                            <hr>
+                        </table>
+
+
+            @endforeach
     </div>
 </div>
-    <p>
+<p>
 
-    </p>
-    <!--<table>
+</p>
+<!--<table>
         <tr>
             <td>ID </td>
             <td>Meno hráča </td>
             <td>Dátum </td>
         </tr>
         @foreach($prihlaseniee as $prihlasenie)
-            <tr>
-                <td>{{$prihlasenie->id}}</td>
+    <tr>
+        <td>{{$prihlasenie->id}}</td>
                 <td>{{$prihlasenie->meno}}</td>
                 <td>{{$prihlasenie->created_at}}</td>
                 <td><a href="{{route('select', ['id'=>$prihlasenie->id])}}">Detail</a> </td>
@@ -171,9 +163,9 @@ div.kontajner{
 @else
     Neexistujú žiadne úlohy
 @endif
--->
+    -->
 <div>
-    <!--  <p class="menicko: ">Meno hráča: {{$prihlasenie->meno}}</p> -->
+<!--  <p class="menicko: ">Meno hráča: {{$prihlasenie->meno}}</p> -->
 
 </div>
 </body>
