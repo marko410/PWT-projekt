@@ -38,13 +38,13 @@ div.kontajner{
 
     padding: 10px;
     margin: center;
-    margin-top: 50px;
-    right:-38%;
+    margin-top: 25px;
+    right:-4%;
     text-align: center;
     align-items: center;
     justify-content: center;
     position: relative;
-    width:20%;
+    width:90%;
   
 
     border-radius: 25px;
@@ -60,7 +60,8 @@ div.kontajner{
             text-align: left;
             justify-content: center;
             position: relative;
-       
+            width: 50%;
+            right: -22%;
       
 
             border-radius: 25px;
