@@ -296,7 +296,7 @@ img.tlacidloZvuk{
 
 
 </div>
-<!--
+
 <div class="container">
     <div class="textik">Koľko litrov krvi prečerpá za deň ľudské srdce?</div><hr>
     <img src="obrázok3.jpg" width="450" height="400">
@@ -737,7 +737,6 @@ img.tlacidloZvuk{
 
 </div>
 
--->
 <!--<otazka20-->
 <audio id="hitovica" src="melody.wav" preload="auto"></audio>
 <form method="post" action="{{route('list3')}}">
@@ -803,7 +802,7 @@ img.tlacidloZvuk{
             skore=skore+1;
             document.getElementById('kkk').value = skore;
         }
-        /*
+
         if (document.getElementById('correct3').checked) {
             skore=skore+1;
             document.getElementById('kkk').value = skore;
@@ -871,13 +870,8 @@ img.tlacidloZvuk{
         if (document.getElementById('correct19').checked) {
             skore=skore+2;
             document.getElementById('kkk').value = skore;
-        }*/
+        }
 
-      /*  if (document.getElementById('correct20').value) {
-            skore++;
-            document.getElementById('kkk').value = skore;
-
-        }*/
         if (document.getElementById('correct20').checked) {
             skore=skore+1;
             document.getElementById('kkk').value = skore;
