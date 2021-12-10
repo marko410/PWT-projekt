@@ -6,12 +6,21 @@ use App\Models\Prihlasenie;
 use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 use Symfony\Component\Console\Input\Input;
 
 
 class HomeController extends Controller
 {
 
+    public function jePrazdnaCiNie(Request $request){
+        //$jePrazdna = Prihlasenie::all()->sortBy('created_at');
+       // $jePrazdna->score = $score;
+        //return view('select-all',['prihlaseniee'=>$prihlaseniee]);
+      //  $users = DB::table('score')->count();
+       // $prihlasen->score = $score;
+        return view('prazdna');
+    }
 
 public function vlozScore(Request $request){
     sleep(2);

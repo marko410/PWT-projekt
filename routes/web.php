@@ -23,6 +23,9 @@ Route::get('/test', [HomeController::class, 'test']);
 Route::get('/list', [HomeController::class, 'list2'])->name('list');
 Route::post('/list', [HomeController::class, 'vlozScore'])->name('list3');
 
+//Route::get('/insert-task-form', [HomeController::class, 'jePrazdnaCiNie'])->name('zabezpec');
+
+Route::get('/prazdna', [HomeController::class, 'jePrazdnaCiNie'])->name('prazdna');
 
 Route::get('/insert-task-form', [HomeController::class, 'getInsertForm'])->name('insert-form');
 Route::post('/insert-task', [HomeController::class, 'insertTask'])->name('insert');

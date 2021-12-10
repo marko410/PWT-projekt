@@ -71,8 +71,14 @@
 </head>
 <body>
 <div class="topnav">
+
     <a class="active" href="{{route('insert-form')}}">Quíz</a>
-    <a href="{{route('select-all')}}">Rebríček</a>
+
+   @if((\Illuminate\Support\Facades\DB::table('prihlasenie')->count())>0)
+        <a href=" {{ route('select-all')}}">Rebríček</a>
+    @else
+        <a class="active" href="{{route('prazdna')}}">Quíz</a>
+    @endif
 </div>
 </body>
 
