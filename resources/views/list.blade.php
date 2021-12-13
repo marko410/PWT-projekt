@@ -26,7 +26,7 @@
             margin-top:auto;
             text-align: center;
             font-family: 'Balthasar', sans-serif;
-
+           
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -41,10 +41,10 @@
             position: relative;
             text-align: center;
             width:90%;
-
+            right:-3%;
         // background-color: rgba(0, 0, 255, 0.1);
 
-            margin-left: auto;
+          //  margin-left: auto;
             height: 20px;
         //padding: 0px;
 
@@ -273,8 +273,9 @@ img.tlacidloZvuk{
 </div>
 
 <div class="container">
-
-
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
     <div class="kon2">
         <div class="textik">Vydychovaný vzduch obsahuje najviac?</div><hr>
     <img src="obrázok2.jpg"style="max-width:50%; height:170px;">
@@ -298,12 +299,15 @@ img.tlacidloZvuk{
 </div>
 
 <div class="container">
-    <div class="textik">Koľko litrov krvi prečerpá za deň ľudské srdce?</div><hr>
-    <img src="obrázok3.jpg" width="450" height="400">
-
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
     <div class="kon2">
+        <div class="textik">Koľko litrov krvi prečerpá za deň ľudské srdce?</div><hr> 
+        <img src="obrázok3.jpg" style="max-width:50%; height:170px;"> 
     <div class="radio-toolbar">
-        <input class="styl" type="radio" id="Odpoved1"  name="odpoved3" value="Odpoved 1"  >
+     
+       <input class="styl" type="radio" id="Odpoved1"  name="odpoved3" value="Odpoved 1"  >
         <label for="Odpoved1">4500</label><br>
 
         <input class="styl" type="radio" id="Odpoved2"  name="odpoved3" value="Odpoved 2">
@@ -324,10 +328,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Ktorý z týchto orgánov ľudského tela nie je párový??</div><hr>
-    <img src="obrázok4.jpg" width="450" height="400">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Ktorý z týchto orgánov ľudského tela nie je párový??</div><hr>
+    <img src="obrázok4.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved4" value="Odpoved 1"  >
             <label for="Odpoved1">Močovod</label><br>
@@ -351,10 +359,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Ktorá krvná skupina má vo svete najvyššie zastúpenie medzi obyvateľstvom??</div><hr>
-    <img src="obrázok5.jpg" width="450" height="400">
-
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
     <div class="kon2">
+        <div class="textik">Ktorá krvná skupina má vo svete najvyššie zastúpenie medzi obyvateľstvom??</div><hr>
+    <img src="obrázok5.jpg" style="max-width:50%; height:170px;">
+
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved5" value="Odpoved 1"  >
             <label for="Odpoved1">A</label><br>
@@ -377,10 +389,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Koľko rôznych vôní rozozná náš čuch?</div><hr>
-    <img src="obrázok6.jpg" width="450" height="400">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Koľko rôznych vôní rozozná náš čuch?</div><hr>
+    <img src="obrázok6.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved6" value="Odpoved 1"  >
             <label for="Odpoved1">20 000</label><br>
@@ -403,10 +419,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Ľudský tep sa spomalí v okamihu, keď sa tvár dotkne vody. Ako sa nazýva tento jav?</div><hr>
-    <img src="obrázok7.jpg" width="450" height="400">
-
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
     <div class="kon2">
+        <div class="textik">Ľudský tep sa spomalí v okamihu, keď sa tvár dotkne vody. Ako sa nazýva tento jav?</div><hr>
+    <img src="obrázok7.jpg" style="max-width:50%; height:170px;">
+
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved7" value="Odpoved 1"  >
             <label for="Odpoved1">Reflex topiacich sa</label><br>
@@ -429,10 +449,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Väzivový útvar, ktorý sa nachádza na lebke malých detí v prvých dvoch rokoch života, sa nazýva:</div><hr>
-    <img src="obrázok8.jpg" width="450" height="400">
-
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
     <div class="kon2">
+        <div class="textik">Väzivový útvar, ktorý sa nachádza na lebke malých detí v prvých dvoch rokoch života, sa nazýva:</div><hr>
+    <img src="obrázok8.jpg" style="max-width:50%; height:170px;">
+
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="correct8"  name="odpoved8" value="Odpoved 1"  >
             <label for="Odpoved1">Fontanela</label><br>
@@ -454,10 +478,13 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Ktoré zuby nenájdete v mliečnom chrupe?</div><hr>
-    <img src="obrázok9.jpg" width="450" height="400">
-
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
     <div class="kon2">
+        <div class="textik">Ktoré zuby nenájdete v mliečnom chrupe?</div><hr>
+    <img src="obrázok9.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved9" value="Odpoved 1"  >
             <label for="Odpoved1">Rezáky</label><br>
@@ -479,10 +506,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Počet stavcov chrbtice človeka je rovnaký ako u žirafy. Koľko ich máme?</div><hr>
-    <img src="obrázok10.jpg" width="450" height="400">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Počet stavcov chrbtice človeka je rovnaký ako u žirafy. Koľko ich máme?</div><hr>
+    <img src="obrázok10.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved10" value="Odpoved 1"  >
             <label for="Odpoved1">25</label><br>
@@ -505,10 +536,13 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Kde nájdeme najmenšie kosti a svaly v ľudskom tele?</div><hr>
-    <img src="obrázok11.jpg" width="450" height="400">
-
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
     <div class="kon2">
+        <div class="textik">Kde nájdeme najmenšie kosti a svaly v ľudskom tele?</div><hr>
+    <img src="obrázok11.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved11" value="Odpoved 1"  >
             <label for="Odpoved1">V srdci</label><br>
@@ -531,10 +565,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Akú kosť vidíte na obrázku?</div><hr>
-    <img src="obrázok12.jpg" width="450" height="400">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Akú kosť vidíte na obrázku?</div><hr>
+    <img src="obrázok12.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved12" value="Odpoved 1"  >
             <label for="Odpoved1">Miechu</label><br>
@@ -557,10 +595,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Na obrázku vidíme prístroj, ktorý sa nazýva:</div><hr>
-    <img src="obrázok13.jpg" width="450" height="400">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Na obrázku vidíme prístroj, ktorý sa nazýva:</div><hr>
+    <img src="obrázok13.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved13" value="Odpoved 1"  >
             <label for="Odpoved1">EKG</label><br>
@@ -583,10 +625,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Ako sa nazýva kosť na obrázku?</div><hr>
-    <img src="obrázok14.jpg" width="450" height="400">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Ako sa nazýva kosť na obrázku?</div><hr>
+    <img src="obrázok14.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved14" value="Odpoved 1"  >
             <label for="Odpoved1">Lakťová kosť</label><br>
@@ -609,10 +655,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Ako sa nazýva kosť na obrázku?</div><hr>
-    <img src="obrázok15.jpg" width="450" height="400">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Ako sa nazýva kosť na obrázku?</div><hr>
+    <img src="obrázok15.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved15" value="Odpoved 1"  >
             <label for="Odpoved1">Holenná kosť</label><br>
@@ -635,10 +685,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Kto nie je z uvedených oprávnený predpisovať lieky?</div><hr>
-    <img src="obrázok16.jpg" width="450" height="400">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Kto nie je z uvedených oprávnený predpisovať lieky?</div><hr>
+    <img src="obrázok16.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved16" value="Odpoved 1"  >
             <label for="Odpoved1">Zubár</label><br>
@@ -662,10 +716,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Koľko svalov sa musí zapojiť pri úsmeve?</div><hr>
-    <img src="obrázok17.jpg" width="450" height="400">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Koľko svalov sa musí zapojiť pri úsmeve?</div><hr>
+    <img src="obrázok17.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved17" value="Odpoved 1"  >
             <label for="Odpoved1">6</label><br>
@@ -686,12 +744,14 @@ img.tlacidloZvuk{
 </div>
 
 
-
 <div class="container">
-    <div class="textik">Ako nazývame ochorenie, ktoré sa prejavuje niekoľkosekundovými zástavami dýchania počas noci?</div><hr>
-    <img src="obrázok18.jpg" width="450" height="400">
-
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
     <div class="kon2">
+        <div class="textik">Ako nazývame ochorenie, ktoré sa prejavuje niekoľkosekundovými zástavami dýchania počas noci?</div><hr>
+    <img src="obrázok18.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved18" value="Odpoved 1"  >
             <label for="Odpoved1">Narkolepsia</label><br>
@@ -714,10 +774,14 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-    <div class="textik">Otorinolaryngológ je odborníkom na:</div><hr>
-    <img src="obrázok19.jpg" width="450" height="400">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Otorinolaryngológ je odborníkom na:</div><hr>
+    <img src="obrázok19.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved19" value="Odpoved 1"  >
             <label for="Odpoved1">Ochorenia ústnej sliznice</label><br>
@@ -742,10 +806,14 @@ img.tlacidloZvuk{
 <form method="post" action="{{route('list3')}}">
 
 <div class="container">
-    <div class="textik">Ktorý faktor sa najviac podieľa na vzniku ochorení pľúc?</div><hr>
-    <img src="obrázok20.jpg" style="max-width:50%; height:170px;">
+<div class="raketa">
+<p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
+</div>
+    
 
     <div class="kon2">
+        <div class="textik">Ktorý faktor sa najviac podieľa na vzniku ochorení pľúc?</div><hr>
+    <img src="obrázok20.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved20" value="Odpoved 1"  >
             <label for="Odpoved1">Strava s vysokým obsahom tuku</label><br>
