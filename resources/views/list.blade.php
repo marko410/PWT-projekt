@@ -110,7 +110,7 @@
             justify-content: center;
             position: relative;
             width: 50%;
-            right: -20%;
+            margin-inline: auto;
 
             border-radius: 25px;
             border: 2px solid pink;

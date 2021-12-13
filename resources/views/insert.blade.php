@@ -26,7 +26,7 @@
             position:relative;
             width: 60%;
             height: 280px;
-            right: -16%;
+            margin-inline: auto;
             border-radius: 25px;
             border: 2px solid pink;
         }
