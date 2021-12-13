@@ -20,19 +20,19 @@ Route::get('/', function () {
 Route::get('/showGame', [HomeController::class, 'showGame'])->name('show-gamesu');
 Route::get('/test', [HomeController::class, 'test']);
 
-Route::get('/list', [HomeController::class, 'list2'])->name('list');
+Route::get('/game', [HomeController::class, 'list2'])->name('list');
 Route::post('/list', [HomeController::class, 'vlozScore'])->name('list3');
 
 //Route::get('/insert-task-form', [HomeController::class, 'jePrazdnaCiNie'])->name('zabezpec');
 
 Route::get('/prazdna', [HomeController::class, 'jePrazdnaCiNie'])->name('prazdna');
 
-Route::get('/insert-task-form', [HomeController::class, 'getInsertForm'])->name('insert-form');
+Route::get('/quiz', [HomeController::class, 'getInsertForm'])->name('insert-form');
 Route::post('/insert-task', [HomeController::class, 'insertTask'])->name('insert');
 
 Route::get('/select-task/{id}', [HomeController::class, 'selectTask'])->name('select');
 
-Route::get('/select-all', [HomeController::class, 'selectAll'])->name('select-all');
+Route::get('/rebricek', [HomeController::class, 'selectAll'])->name('select-all');
 
 Route::post('/update-task', [HomeController::class, 'updateTask'])->name('update');
 Route::get('/update-task-form/{id}', [HomeController::class, 'getUpdateForm'])->name('update-form');
