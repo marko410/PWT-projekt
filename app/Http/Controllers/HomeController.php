@@ -12,50 +12,38 @@ use Symfony\Component\Console\Input\Input;
 
 class HomeController extends Controller
 {
-
+//funkcia na pozorovanie či je databáza prázdna alebo nie
     public function jePrazdnaCiNie(Request $request){
-        //$jePrazdna = Prihlasenie::all()->sortBy('created_at');
-       // $jePrazdna->score = $score;
-        //return view('select-all',['prihlaseniee'=>$prihlaseniee]);
-      //  $users = DB::table('score')->count();
-       // $prihlasen->score = $score;
         return view('prazdna');
     }
 
-public function vlozScore(Request $request){
+public function vlozScore(Request $request){  //funkcia na vložene score
     sleep(2);
 
-    $score = $request->input('score', '');
+    $score = $request->input('score', ''); //nahranie score do DB
 
-    $prihlasenie = Prihlasenie::latest('id')->first();
-    $prihlasenie->score = $score;
-    $prihlasenie->update();
+    $prihlasenie = Prihlasenie::latest('id')->first();// zaradenie an koniec
+    $prihlasenie->score = $score; // vložiť score do tabulky
+    $prihlasenie->update(); //update
 
-    return redirect()->route('select-all');
+    return redirect()->route('select-all'); //zobrazenie rebríčka
 }
 
-    public function list2()
+    public function list2()       //funkcia zodpovedná za zobrazenie prihláseného užívateľa
     {
 
         $prihlasenie = Prihlasenie::orderBy('id', 'DESC')->first();
         return view('list', ['prihlasenie' => $prihlasenie]);
     }
 
-    public function showGame()
-    {
-        return view('game');
-    }
 
-    public function test()
-    {
-        echo 222;
-    }
-
-    public function getInsertForm(){
+    public function getInsertForm(){     //prihlasovanie vložiť meno
         return view('insert');
+
     }
-    public function insertTask(Request $request)
+    public function insertTask(Request $request)       // funkcia prihlásenia
     {
+
         $meno = $request->input('meno', '');
 
         $prihlasenie = new Prihlasenie();
@@ -80,46 +68,11 @@ public function vlozScore(Request $request){
         }
     }
 
-
-
-    public function selectTask($id)
-    {
-        $prihlasenie = Prihlasenie::find($id);
-        return view('select',['prihlasenie'=>$prihlasenie]);
-
-    }
-
-    public function selectAll()
+    public function selectAll()       //funkcia zobrazenia skóre
     {
 
         $prihlaseniee = Prihlasenie::all()->sortBy('created_at');
-        return view('select-all',['prihlaseniee'=>$prihlaseniee]);
+        return view('select-all',['prihlaseniee'=>$prihlaseniee]); //zobraz select-all a používateľov
     }
 
-    public function updateTask(Request $request)
-    {
-        $id = $request ->input('id', 1);
-
-        $meno = $request->input('meno', '');
-
-
-        $prihlasenie = Prihlasenie::findOrFail($id);
-        $prihlasenie->meno = $meno;
-        $prihlasenie->update();
-
-        return redirect()->route('select', ['id'=>$id]);
-    }
-
-    public function getUpdateForm($id){
-        $prihlasenie = Prihlasenie::find($id);
-        return view('update', ['prihlasenie'=>$prihlasenie]);
-    }
-
-    public function deleteTask($id)
-    {
-        $prihlasenie = Prihlasenie::findOrFail($id);
-        $prihlasenie->delete();
-        return redirect()->route('select-all');
-
-    }
 }

@@ -18,15 +18,12 @@
         @import url('http://fonts.cdnfonts.com/css/balthazar');
         p.velkyfrajer{
 
-            /*font-size: 20px;
-            font-family: "Roboto", sans-serif;
-            margin: 0 auto;*/
             font-size: 20px;
             position: relative;
             margin-top:auto;
             text-align: center;
             font-family: 'Balthasar', sans-serif;
-           
+
             background: -webkit-linear-gradient(#f17109, #b004da);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -35,7 +32,7 @@
         div.raketa{
             border: 5px solid pink;
             border-radius: 10px;
-            background-color:rgba(0, 0, 255, 0.1);
+           background-color:rgba(0, 0, 255, 0.1);
             padding: 10px;
             margin: 5px;
             position: relative;
@@ -219,17 +216,17 @@ img.tlacidloZvuk{
 
     <source src="najvacsa_pecka.mp3" type="audio/mpeg">
 </audio>-->
-<img class="tlacidloZvuk" onclick="VypniMuzicku()" src="M_On.gif" width="3%">
-<audio id="vypaluvacka" src="najvacsa_pecka.mp3" preload="auto"></audio>
+<img class="tlacidloZvuk" onclick="VypniMuzicku()" src="M_On.gif" width="3%">  <!--tlacidlo zvuk-->
+<audio id="vypaluvacka" src="najvacsa_pecka.mp3" preload="auto"></audio> <!--vlozenie pesničky-->
 
 <script>
 
         var KdePakTyPtacku = document.getElementById("vypaluvacka");
         KdePakTyPtacku.volume=0.2;
-        KdePakTyPtacku.play();
+        KdePakTyPtacku.play(); <!--start pesnicky-->
 
 
-    function VypniMuzicku(){
+    function VypniMuzicku(){ <!--vypnutie pesničky-->
         var KdePakTyPtacku = document.getElementById("vypaluvacka");
         if(KdePakTyPtacku.volume===0.2){
             KdePakTyPtacku.volume=0.0;
@@ -243,7 +240,7 @@ img.tlacidloZvuk{
 
 
 <div class="container">
-<div class="raketa">
+<div class="raketa">  <!-- zobrazenie prihláseného  -->
     <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 
 </div>
@@ -251,10 +248,11 @@ img.tlacidloZvuk{
     <div class="kon2">
 
 
-        <div class="textik">Kde sa tvorí žlč?</div><hr>
+        <div class="textik">Kde sa tvorí žlč?</div><hr>  <!--otazky-->
 
         <img src="obrázok1.jpg" style="max-width:50%; height:170px;">
  <div class="radio-toolbar">
+     <!--<otazka1-->
         <input class="styl" type="radio" id="correct1" name="odpoved1" value="Odpoved 1" >
         <label for="Odpoved1">V pečeni</label><br>
         <input class="styl" type="radio" id="Odpoved2"  name="odpoved1"  value="Odpoved 2">
@@ -303,10 +301,10 @@ img.tlacidloZvuk{
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
     <div class="kon2">
-        <div class="textik">Koľko litrov krvi prečerpá za deň ľudské srdce?</div><hr> 
-        <img src="obrázok3.jpg" style="max-width:50%; height:170px;"> 
+        <div class="textik">Koľko litrov krvi prečerpá za deň ľudské srdce?</div><hr>
+        <img src="obrázok3.jpg" style="max-width:50%; height:170px;">
     <div class="radio-toolbar">
-     
+
        <input class="styl" type="radio" id="Odpoved1"  name="odpoved3" value="Odpoved 1"  >
         <label for="Odpoved1">4500</label><br>
 
@@ -331,7 +329,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
         <div class="textik">Ktorý z týchto orgánov ľudského tela nie je párový??</div><hr>
@@ -362,7 +360,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
     <div class="kon2">
         <div class="textik">Ktorá krvná skupina má vo svete najvyššie zastúpenie medzi obyvateľstvom??</div><hr>
     <img src="obrázok5.jpg" style="max-width:50%; height:170px;">
@@ -392,7 +390,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
         <div class="textik">Koľko rôznych vôní rozozná náš čuch?</div><hr>
@@ -422,7 +420,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
     <div class="kon2">
         <div class="textik">Ľudský tep sa spomalí v okamihu, keď sa tvár dotkne vody. Ako sa nazýva tento jav?</div><hr>
     <img src="obrázok7.jpg" style="max-width:50%; height:170px;">
@@ -452,7 +450,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
     <div class="kon2">
         <div class="textik">Väzivový útvar, ktorý sa nachádza na lebke malých detí v prvých dvoch rokoch života, sa nazýva:</div><hr>
     <img src="obrázok8.jpg" style="max-width:50%; height:170px;">
@@ -481,7 +479,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
     <div class="kon2">
         <div class="textik">Ktoré zuby nenájdete v mliečnom chrupe?</div><hr>
     <img src="obrázok9.jpg" style="max-width:50%; height:170px;">
@@ -509,7 +507,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
         <div class="textik">Počet stavcov chrbtice človeka je rovnaký ako u žirafy. Koľko ich máme?</div><hr>
@@ -539,7 +537,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
     <div class="kon2">
         <div class="textik">Kde nájdeme najmenšie kosti a svaly v ľudskom tele?</div><hr>
     <img src="obrázok11.jpg" style="max-width:50%; height:170px;">
@@ -568,7 +566,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
         <div class="textik">Akú kosť vidíte na obrázku?</div><hr>
@@ -598,7 +596,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
         <div class="textik">Na obrázku vidíme prístroj, ktorý sa nazýva:</div><hr>
@@ -628,7 +626,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
         <div class="textik">Ako sa nazýva kosť na obrázku?</div><hr>
@@ -658,7 +656,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
         <div class="textik">Ako sa nazýva kosť na obrázku?</div><hr>
@@ -688,10 +686,10 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
-        <div class="textik">Kto nie je z uvedených oprávnený predpisovať lieky?</div><hr>
+        <div class="textik">Kto nie je z uvedených oprávnený predpisovať lieky?</div><hr>  <!--otazky-->
     <img src="obrázok16.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved16" value="Odpoved 1"  >
@@ -719,10 +717,10 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
-        <div class="textik">Koľko svalov sa musí zapojiť pri úsmeve?</div><hr>
+        <div class="textik">Koľko svalov sa musí zapojiť pri úsmeve?</div><hr>  <!--otazky-->
     <img src="obrázok17.jpg" style="max-width:50%; height:170px;">
         <div class="radio-toolbar">
             <input class="styl" type="radio" id="Odpoved1"  name="odpoved17" value="Odpoved 1"  >
@@ -748,7 +746,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
     <div class="kon2">
         <div class="textik">Ako nazývame ochorenie, ktoré sa prejavuje niekoľkosekundovými zástavami dýchania počas noci?</div><hr>
     <img src="obrázok18.jpg" style="max-width:50%; height:170px;">
@@ -777,7 +775,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
         <div class="textik">Otorinolaryngológ je odborníkom na:</div><hr>
@@ -809,7 +807,7 @@ img.tlacidloZvuk{
 <div class="raketa">
 <p class="velkyfrajer"  style="text-align:center" >Ste prihlásený ako - {{$prihlasenie->meno}} </p>
 </div>
-    
+
 
     <div class="kon2">
         <div class="textik">Ktorý faktor sa najviac podieľa na vzniku ochorení pľúc?</div><hr>
@@ -845,22 +843,22 @@ img.tlacidloZvuk{
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-    // displaying the first block of question
+    // zobrazenie otázok
     document.getElementsByClassName('container')[0].style.display = "block";
 
-    // DEFINING THE NEXT FUNCTION
+    // zobrazenie nasledujúcej otázky
     function next(id) {
         document.getElementsByClassName('container')[id-1].style.display = "none";
         document.getElementsByClassName('container')[id].style.display = "block";
     }
-    //getting final result
 
-    function result() {
+
+    function result() {  //zobraziť výsledok
         var hitovica1 = document.getElementById("hitovica");
             hitovica1.play();
 
 
-        var skore = 0;
+        var skore = 0;   //funkcia počítanie bodov
         if (document.getElementById('correct1').checked) {
            //score++;
             skore=skore+1;
@@ -944,15 +942,13 @@ img.tlacidloZvuk{
             skore=skore+1;
             document.getElementById('kkk').value = skore;
 
-
-
         }
-        //document.getElementById('correct20').value = skore;
+
 
 
 
         if (skore >= 17) {
-            Swal.fire({
+            Swal.fire({  //node.js zobrazenie
                 title: 'Pacient prežil',
                 text: 'tvoje skore : ' + skore,
                 imageUrl: 'https://i0.wp.com/www.printmag.com/wp-content/uploads/2021/02/4cbe8d_f1ed2800a49649848102c68fc5a66e53mv2.gif?fit=476%2C280&ssl=1',
@@ -960,7 +956,7 @@ img.tlacidloZvuk{
                 imageWidth:220,
             }).then(function(){
 
-                window.location="select-all";
+                window.location="rebricek";
             })
         }
         if (skore <= 16 && skore>=10) {
@@ -971,7 +967,7 @@ img.tlacidloZvuk{
                 imageSize: "200*200",
                 imageWidth:220,
             }).then(function(){
-                window.location="select-all";
+                window.location="rebricek";
             })
         }
         if (skore <= 9) {
@@ -983,7 +979,7 @@ img.tlacidloZvuk{
                 imageWidth:220,
 
             }).then(function(){
-                window.location="select-all";
+                window.location="rebricek";
             })
         }
 

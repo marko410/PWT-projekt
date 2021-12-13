@@ -11,6 +11,8 @@ class Prihlasenie extends Model
      *
      * @var string
      */
+    /*
+     * tabulka v databáze (komunikuje s databázou)*/
     protected $table = 'prihlasenie';
 
     /**
@@ -18,6 +20,9 @@ class Prihlasenie extends Model
      *
      * @var array
      */
+
+    /*
+     * premenné v tabulke prohlásenie*/
     protected $fillable = ['meno', 'score'];
 
 

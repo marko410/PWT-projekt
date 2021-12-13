@@ -1,4 +1,4 @@
-<!--<a href="{{route('insert-form')}}">Quíz</a> | <a href="{{route('select-all')}}">Rebríček</a><br>-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,7 +74,7 @@
 
     <a class="active" href="{{route('insert-form')}}">Quíz</a>
 
-   @if((\Illuminate\Support\Facades\DB::table('prihlasenie')->count())>0)
+   @if((\Illuminate\Support\Facades\DB::table('prihlasenie')->count())>0)  <?php //ak máš prázdnu databázu, zobrazí blade prázdna?>
         <a href=" {{ route('select-all')}}">Rebríček</a>
     @else
         <a class="active" href="{{route('prazdna')}}">Quíz</a>
