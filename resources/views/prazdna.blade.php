@@ -1,10 +1,10 @@
 @include('nav')
 
-    <!DOCTYPE html>
+    <!DOCTYPE html>                                                          <?php// zobrazenie prázdnej databázy?>
 <html>
 <head>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="stylesheet" href="../resources/css/main.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />   <?php// zobrazenie prázdnej databázy?>
+    <link rel="stylesheet" href="../resources/css/main.css">                 <?php// zobrazenie prázdnej databázy?>
     <style>
         @import url('http://fonts.cdnfonts.com/css/balthazar');
 
@@ -89,7 +89,7 @@
 <body>
 <div class="kontajner">
     <div class="kon2">
-        <p class="pismo">Žiadne záznamy</p>
+        <p class="pismo">Žiadne záznamy</p>    <?php// text?>
     </div>
 </div>
 </body>
