@@ -15,6 +15,7 @@
            border: 5px solid pink;
             background-color: rgba(0, 0, 255, 0.08);
             padding: 10px;
+            margin-inline: auto;
 
 
     margin-bottom: 39px;
