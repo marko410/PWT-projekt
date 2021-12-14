@@ -4,13 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class Prihlasenie extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
+    /*
+     * tabulka v databáze (komunikuje s databázou)*/
     protected $table = 'prihlasenie';
 
     /**
@@ -18,5 +20,11 @@ class Task extends Model
      *
      * @var array
      */
-    protected $fillable = ['meno', 'skore'];
+
+    /*
+     * premenné v tabulke prohlásenie*/
+    protected $fillable = ['meno', 'score'];
+
+
 }
+
